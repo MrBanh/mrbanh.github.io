@@ -3,11 +3,11 @@ import Navbar from "./Navbar";
 
 export default function Header(){
 	return (
-		<header className="">
-			<div className="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center">
+		<header className="min-h-header flex">
+			<div className="container m-auto flex flex-wrap py-4 flex-col lg:flex-row items-center">
 				<Link href="/">
-					<a class="flex items-center mb-4 md:mb-0">
-						<span className="text-3xl font-custom1 font-semibold text-lightBlue-600">
+					<a className="flex items-center">
+						<span className="text-3xl font-semibold text-lightBlue-600">
 							TB
 						</span>
 					</a>

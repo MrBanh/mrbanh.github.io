@@ -23,13 +23,13 @@ module.exports = {
 			custom2: [ "Barlow", "sans-serif" ]
 		},
 		height: {
-			belowNav: "calc(100vh - 120px)"
+			section: "calc(100vh - 100px)"
 		},
 		maxWidth: {
 			"1/2": "50%"
 		},
 		minHeight: {
-			"75px": "75px"
+			header: "100px"
 		}
 	},
 	variants: {

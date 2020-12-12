@@ -7,7 +7,8 @@ export const ArrowIcon = () => (
 							fill-current 
 							h-4 w-4 
 							inline-block 
-							m-2 
+							ml-2 
+							my-2
 							absolute
 							group-hover:animate-ping
 							transition-all duration-100 ease-linear
@@ -26,7 +27,8 @@ export const ArrowIcon = () => (
 							fill-current 
 							h-4 w-4 
 							inline-block 
-							m-2 
+							ml-2 
+							my-2
 							"
 		>
 			<path

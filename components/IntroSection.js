@@ -2,20 +2,20 @@ import Link from "next/link";
 import { ArrowIcon } from "./ArrowIcon";
 
 const IntroSection = () => (
-	<section className="h-belowNav flex flex-col-reverse md:flex-row justify-evenly md:justify-center items-center">
-		<div className="h-full font-custom1 ">
-			<h1 className="text-5xl md:text-8xl break-words font-semibold">
+	<section className="h-section flex flex-col-reverse lg:flex-row justify-evenly lg:justify-center items-center">
+		<div className="">
+			<h1 className="text-4xl lg:text-5xl break-words text-center font-semibold">
 				Tony Banh
 			</h1>
-			<div className="font-normal text-gray-600 m-2">
+			<div className="font-normal text-center text-gray-600 my-4">
 				<h2 className="">Software Developer</h2>
 				<p className="">Based in California</p>
 			</div>
 			<div className="
 			font-custom2 
 			text-base
-			m-2
-			flex flex-col md:flex-row items-start md:items-center
+			my-4
+			flex flex-col lg:flex-row items-start lg:items-center
 			">
 				<Link href="/Contacts">
 					<button
@@ -27,6 +27,7 @@ const IntroSection = () => (
 					 uppercase
 					 text-md
 					 px-6 py-3
+					 mx-auto
 					 mb-2
 					 rounded
 					 hover:shadow-lg
@@ -48,8 +49,9 @@ const IntroSection = () => (
 					hover:underline
 					focus:underline
 					focus:outline-black
-					m-0
-					md:m-auto
+					mx-auto
+					text-center
+					lg:m-auto
 					group
 					">
 						See my Projects
