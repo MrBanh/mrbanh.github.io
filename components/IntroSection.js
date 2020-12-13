@@ -2,17 +2,16 @@ import Link from "next/link";
 import { ArrowIcon } from "./ArrowIcon";
 
 const IntroSection = () => (
-	<section className="h-section flex flex-col-reverse lg:flex-row justify-evenly lg:justify-center items-center">
+	<section className="h-section flex flex-col lg:flex-row justify-evenly lg:justify-center items-center">
 		<div className="">
 			<h1 className="text-4xl lg:text-5xl break-words text-center font-semibold">
 				Tony Banh
 			</h1>
-			<div className="font-normal text-center text-gray-600 my-4">
+			<div className="font-normal text-center my-4">
 				<h2 className="">Software Developer</h2>
 				<p className="">Based in California</p>
 			</div>
 			<div className="
-			font-custom2 
 			text-base
 			my-4
 			flex flex-col lg:flex-row items-start lg:items-center
@@ -45,7 +44,6 @@ const IntroSection = () => (
 				</Link>
 				<Link href="/Projects">
 					<a className="
-					text-gray-600
 					hover:underline
 					focus:underline
 					focus:outline-black

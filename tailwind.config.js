@@ -18,10 +18,6 @@ module.exports = {
 			pink: colors.pink
 		},
 		extend: {},
-		fontFamily: {
-			custom1: [ "Sora", "sans-serif" ],
-			custom2: [ "Barlow", "sans-serif" ]
-		},
 		height: {
 			section: "calc(100vh - 100px)"
 		},

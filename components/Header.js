@@ -4,11 +4,12 @@ import Navbar from "./Navbar";
 export default function Header(){
 	return (
 		<header className="min-h-header flex">
-			<div className="container m-auto flex flex-wrap py-4 flex-col lg:flex-row items-center">
+			<div className="my-auto flex flex-row items-center w-full">
 				<Link href="/">
 					<a className="flex items-center">
-						<span className="text-3xl font-semibold text-lightBlue-600">
-							TB
+						<img src="/logo.svg" alt="Logo icon" className="h-12 w-12 mr-3"/>
+						<span className="text-lg font-semibold">
+							Tony Banh
 						</span>
 					</a>
 				</Link>
