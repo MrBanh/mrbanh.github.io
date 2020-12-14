@@ -5,7 +5,7 @@ import IntroSection from "../components/IntroSection";
 
 export default function Home(){
 	return (
-		<div className="h-screen container mx-auto px-8 font-sans text-lightBlue-900">
+		<div className="h-screen container mx-auto px-8 font-sans text-gray-600 font-medium">
 			<Head>
 				<title>Tony Banh's Portfolio</title>
 				<link

@@ -12,10 +12,7 @@ module.exports = {
 			black: "#000",
 			white: "#fff",
 			gray: colors.coolGray,
-			red: colors.red,
-			yellow: colors.amber,
-			blue: colors.blue,
-			pink: colors.pink
+			blue: colors.blue
 		},
 		extend: {},
 		height: {
@@ -23,6 +20,9 @@ module.exports = {
 		},
 		maxWidth: {
 			"1/2": "50%"
+		},
+		maxHeight: {
+			section: "calc(100vh - 100px)"
 		},
 		minHeight: {
 			header: "100px"
@@ -32,7 +32,8 @@ module.exports = {
 		extend: {
 			borderStyle: [ "hover", "focus" ],
 			borderWidth: [ "hover", "focus" ],
-			animation: [ "hover", "focus", "group-hover" ]
+			animation: [ "hover", "focus", "group-hover" ],
+			fontSize: [ "hover", "focus" ]
 		}
 	},
 	plugins: []
