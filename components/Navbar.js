@@ -1,13 +1,22 @@
-import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import NavItem from "./NavItem";
 
 export default function Navbar(){
 	const [ isOpen, setIsOpen ] = useState(false);
+
+	useEffect(() => {
+		function handleResize(){
+			setIsOpen(false);
+		}
+
+		window.addEventListener("resize", handleResize);
+	});
+
 	return (
 		// Navbar
 		<nav className="
 			flex
-			lg:max-w-1/2 
+			lg:max-w-1/2
 			lg:w-full
 		">
 			{/* Hamburger menu icon */}
@@ -45,7 +54,7 @@ export default function Navbar(){
 				className={`
                 	flex
 					text-white
-					bg-lightBlue-600
+					bg-blue-600
 					rounded
 					absolute
 					flex-col
@@ -59,7 +68,7 @@ export default function Navbar(){
 					right-0
 					text-2xl
 					transform
-					transition-opacity duration-150 ease-linear
+					${isOpen ? "transition-opacity duration-150 ease-linear" : ""}
 					${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}
 
 					lg:flex
@@ -116,42 +125,15 @@ export default function Navbar(){
 				</div>
 
 				{/* Menu list */}
-				<Link href="/About">
-					<a className="
-					lg:hover:text-lightBlue-600
-					transition-all duration-100 ease-linear
-					transform
-					hover:scale-110
-					origin-left
-					ml-auto
-					">
-						About
-					</a>
-				</Link>
-				<Link href="/Projects">
-					<a className="
-					lg:hover:text-lightBlue-600
-					transition-all duration-100 ease-linear
-					transform
-					hover:scale-110
-					origin-left
-					ml-auto
-					">
-						Projects
-					</a>
-				</Link>
-				<Link href="/Contacts">
-					<a className="
-					lg:hover:text-lightBlue-600
-					transition-all duration-100 ease-linear
-					transform
-					hover:scale-110
-					origin-left
-					ml-auto
-					">
-						Contacts
-					</a>
-				</Link>
+				<NavItem href="#about">About</NavItem>
+				<NavItem href="#experience">Experience</NavItem>
+				<NavItem href="#projects">Projects</NavItem>
+				<NavItem
+					target="_blank"
+					href="https://drive.google.com/file/d/1V_4DicXo8RTdx9cHRFxAaOA37Jl0piSt/view?usp=sharing"
+				>
+					Resume
+				</NavItem>
 			</div>
 		</nav>
 	);
