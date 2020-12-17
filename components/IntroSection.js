@@ -8,6 +8,7 @@ const IntroSection = () => (
 	items-center
 	h-section
 	select-none
+	mt-section
 
 	lg:flex-row
 	">

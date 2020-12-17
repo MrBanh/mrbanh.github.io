@@ -10,13 +10,16 @@ module.exports = {
 				lightBlue: colors.lightBlue
 			},
 			minHeight: {
-				header: "100px"
+				header: "80px"
+			},
+			margin: {
+				section: "80px"
 			},
 			maxWidth: {
 				"1/2": "50%"
 			},
 			height: {
-				section: "calc(100vh - 100px)"
+				section: "calc(100vh - 80px)"
 			}
 		}
 	},
