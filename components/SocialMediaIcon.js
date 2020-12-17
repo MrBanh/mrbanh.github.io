@@ -1,6 +1,6 @@
-export default function SocialMediaIcon({ children, target, href }){
+export default function SocialMediaIcon(props){
 	return (
-		<a target={target || "_self"} href={href || "#"}>
+		<a {...props}>
 			<div className="
                 h-12
                 w-12
@@ -19,7 +19,7 @@ export default function SocialMediaIcon({ children, target, href }){
                 focus:select-none
                 focus:outline-none
             ">
-				{children}
+				{props.children}
 			</div>
 		</a>
 	);
