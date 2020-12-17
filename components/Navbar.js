@@ -78,6 +78,7 @@ export default function Navbar(){
 					lg:items-center
 					lg:w-full
 					lg:p-0
+					lg:m-0
 					lg:justify-between
 					lg:text-current
 					lg:bg-transparent
