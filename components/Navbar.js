@@ -131,7 +131,6 @@ export default function Navbar(){
 
 				{/* Menu list */}
 				<NavItem href="#about">About</NavItem>
-				<NavItem href="#experience">Experience</NavItem>
 				<NavItem href="#projects">Projects</NavItem>
 				<NavItem
 					target="_blank"

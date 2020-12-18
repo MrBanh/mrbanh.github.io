@@ -1,11 +1,11 @@
 import Head from "next/head";
-
 import Header from "../components/Header";
 import IntroSection from "../components/IntroSection";
+import AboutSection from "../components/AboutSection";
 
 export default function Home(){
 	return (
-		<div className="h-screen font-sans text-gray-600 font-medium">
+		<div className="font-sans text-gray-600 font-medium">
 			<Head>
 				<title>Tony Banh's Portfolio</title>
 				<link
@@ -31,7 +31,7 @@ export default function Home(){
 			<Header />
 			<main className="container mx-auto px-8">
 				<IntroSection />
-				<div className="h-screen">Test</div>
+				<AboutSection />
 			</main>
 
 			<footer />
