@@ -24,7 +24,7 @@ const IntroSection = () => (
 				Tony Banh
 			</h1>
 			<div className="mb-4">
-				<h2 className="">// Software Developer</h2>
+				<p className="">// Software Developer</p>
 				<p className="">// Based in California</p>
 			</div>
 

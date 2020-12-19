@@ -58,7 +58,7 @@ export default function Header(){
 							alt="Logo icon"
 							className="h-12 w-12 mr-3"
 						/>
-						<span className="text-lg font-semibold">Tony Banh</span>
+						<span className="text-lg">Tony Banh</span>
 					</a>
 				</Link>
 				<Navbar />
