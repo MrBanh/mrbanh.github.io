@@ -1,7 +1,5 @@
 export const Background = () => (
 	<div>
-		<h3>Background</h3>
-
 		<div className="">
 			<p>
 				My name is Tony, and I am a senior at Fort Hays State University

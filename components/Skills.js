@@ -4,7 +4,12 @@ import skills from "../src/assets/skills";
 export const Skills = () => (
 	<div>
 		<h3>Skills</h3>
-		<ul>
+		<ul className="
+		grid
+		grid-flow-row
+		grid-cols-3
+		gap-4
+		">
 			{skills.map((data, idx) => {
 				return <Skill {...data} key={idx} />;
 			})}

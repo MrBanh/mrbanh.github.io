@@ -16,10 +16,6 @@
 		"name": "Python"
 	},
 	{
-		"icon": "/icons/c++.svg",
-		"name": "C/C++"
-	},
-	{
 		"icon": "/icons/react.svg",
 		"name": "React.js"
 	},
