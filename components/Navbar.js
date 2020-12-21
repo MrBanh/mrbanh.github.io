@@ -35,14 +35,13 @@ export default function Navbar({ scroll }){
 	return (
 		// Navbar
 		<nav className="
-			flex
-			font-mono
-			text-lg
+		flex
+		font-mono
+		text-lg
 
-			lg:max-w-1/2
-			lg:w-full
+		lg:max-w-1/2
+		lg:w-full
 		">
-			{console.log("rendered")}
 			{/* Hamburger menu icon */}
 			<div className="
 				flex

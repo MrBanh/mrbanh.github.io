@@ -6,7 +6,6 @@ export default function Button(props){
 					bg-gradient-to-tr from-teal-400 to-blue-500
 					text-white
 					font-mono
-					font-semibold
 					px-6 py-3
 					rounded
 					border-solid
