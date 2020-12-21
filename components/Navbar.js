@@ -1,28 +1,48 @@
 import { useState, useEffect } from "react";
 import NavItem from "./NavItem";
 
-export default function Navbar(){
+export default function Navbar({ scroll }){
 	const [ isOpen, setIsOpen ] = useState(false);
+	const [ renderMenu, setRenderMenu ] = useState(true);
 
-	useEffect(() => {
-		function handleResize(){
-			setIsOpen(false);
-		}
+	useEffect(
+		() => {
+			function handleResize(){
+				setIsOpen(false);
 
-		window.addEventListener("resize", handleResize);
+				setRenderMenu(false);
+				setTimeout(() => {
+					setRenderMenu(true);
+				}, 100);
+			}
 
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, []);
+			function handleScroll(){
+				if (scroll) {
+					setIsOpen(false);
+				}
+			}
+
+			handleScroll();
+
+			window.addEventListener("resize", handleResize);
+			return () => {
+				window.removeEventListener("resize", handleResize);
+			};
+		},
+		[ isOpen, renderMenu, scroll ]
+	);
 
 	return (
 		// Navbar
 		<nav className="
 			flex
+			font-mono
+			text-lg
+
 			lg:max-w-1/2
 			lg:w-full
 		">
+			{console.log("rendered")}
 			{/* Hamburger menu icon */}
 			<div className="
 				flex
@@ -34,12 +54,11 @@ export default function Navbar(){
 					m-auto
 					transform
 					transition-color transition-transform duration-150 ease-linear
+					text-lightBlue-600
+					rounded
 					hover:scale-110
 					focus:scale-110
-					hover:text-lightBlue-600
-					focus:text-lightBlue-600
 					focus:outline-none
-
 					`}
 					aria-label="toggle menu"
 					onClick={() => setIsOpen(true)}
@@ -54,26 +73,24 @@ export default function Navbar(){
 			</div>
 
 			{/* Hamburger menu */}
-			<div
-				className={`
+			{renderMenu ? (
+				<div
+					className={`
                 	flex
 					text-white
-					bg-blue-600
-					rounded
+					bg-lightBlue-600
 					absolute
 					flex-col
-					pl-8
-					pb-8
-					pt-2
-					pr-4
-					m-4
+					p-6
 					left-0
 					top-0
 					right-0
 					text-2xl
 					transform
-					${isOpen ? "transition-opacity duration-150 ease-linear" : ""}
-					${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}
+					transition-transform
+					duration-150
+					ease-linear
+					${isOpen ? "translate-y-0" : "-translate-y-full"}
 
 					lg:flex
 					lg:static
@@ -88,19 +105,18 @@ export default function Navbar(){
 					lg:bg-transparent
 					lg:h-full
 					lg:text-right
-					lg:opacity-100
-					lg:visible
+					lg:translate-y-0
 					`}
-			>
-				{/* X icon */}
-				<div className="
+				>
+					{/* X icon */}
+					<div className="
 				w-full
 				flex
 				lg:hidden
 				">
-					<button
-						type="button"
-						className="
+						<button
+							type="button"
+							className="
 						text-white
 						ml-auto
 						transform
@@ -112,33 +128,47 @@ export default function Navbar(){
 						focus:outline-none
 
 						"
-						aria-label="toggle menu"
+							aria-label="toggle menu"
+							onClick={() => setIsOpen(false)}
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								className="h-12 w-12 fill-current"
+							>
+								<path
+									fillRule="evenodd"
+									d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+									clipRule="evenodd"
+								/>
+							</svg>
+						</button>
+					</div>
+
+					{/* Menu list */}
+					<NavItem href="#about" onClick={() => setIsOpen(false)}>
+						About
+					</NavItem>
+					<NavItem
+						href="#experience"
 						onClick={() => setIsOpen(false)}
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 20 20"
-							className="h-12 w-12 fill-current"
-						>
-							<path
-								fillRule="evenodd"
-								d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-								clipRule="evenodd"
-							/>
-						</svg>
-					</button>
+						Experience
+					</NavItem>
+					<NavItem href="#projects" onClick={() => setIsOpen(false)}>
+						Projects
+					</NavItem>
+					<NavItem
+						target="_blank"
+						href="https://drive.google.com/file/d/1V_4DicXo8RTdx9cHRFxAaOA37Jl0piSt/view?usp=sharing"
+						onClick={() => setIsOpen(false)}
+					>
+						Resume
+					</NavItem>
 				</div>
-
-				{/* Menu list */}
-				<NavItem href="#about">About</NavItem>
-				<NavItem href="#projects">Projects</NavItem>
-				<NavItem
-					target="_blank"
-					href="https://drive.google.com/file/d/1V_4DicXo8RTdx9cHRFxAaOA37Jl0piSt/view?usp=sharing"
-				>
-					Resume
-				</NavItem>
-			</div>
+			) : (
+				""
+			)}
 		</nav>
 	);
 }

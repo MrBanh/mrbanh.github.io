@@ -5,7 +5,7 @@ const NavItem = (props) => {
 			className="
 					cursor-pointer
 					lg:hover:text-lightBlue-600
-					transition-all duration-100 ease-linear
+					transition-all duration-150 ease-linear
 					transform
 					hover:scale-110
 					origin-left

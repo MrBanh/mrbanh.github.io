@@ -29,7 +29,7 @@ export default function Home(){
 			</Head>
 
 			<Header />
-			<main className="container mx-auto px-8">
+			<main className="container flex flex-col items-center px-6">
 				<IntroSection />
 				<AboutSection />
 			</main>

@@ -1,50 +1,57 @@
-import { SocialMediaIcons } from "./SocialMediaIcons";
+import Button from "./Button";
 
 const IntroSection = () => (
 	<section className="
 	flex
 	flex-col
-	justify-around
-	items-center
-	h-section
+	justify-center
+	items-start
+	h-screen
 	select-none
-	mt-section
-
-	lg:flex-row
+	py-section
+	w-full
+	lg:max-w-screen-md
+	xl:max-w-screen-lg
 	">
 		{/* Intro text / icons */}
-		<div className="">
-			<h1 className="
-			text-6xl
-			pb-4
-			bg-clip-text
-			bg-gradient-to-r from-teal-400 to-blue-600
-			text-transparent
-			">
-				Tony Banh
-			</h1>
-			<div className="mb-4">
-				<p className="">// Software Developer</p>
-				<p className="">// Based in California</p>
-			</div>
 
-			<SocialMediaIcons />
+		<div className="
+			text-5xl
+			font-bold
+			bg-clip-text
+			bg-gradient-to-r from-teal-400 to-blue-500
+			text-transparent
+			sm:text-7xl
+			md:text-8xl
+			lg:text-9xl
+			">
+			<h1 className="
+			leading-snug
+			">Tony Banh</h1>
 		</div>
 
-		{/* Intro image */}
 		<div className="
-		w-4/5
-		lg:w-2/5
+		text-4xl
+		font-bold
+		text-gray-400
+		pb-4
+		sm:text-6xl
+		md:text-7xl
+		lg:text-8xl
 		">
-			<img
-				className="
-			m-auto
-			lg:ml-auto
-			lg:mr-0
-			"
-				src="/intro_image.svg"
-				alt="App development image"
-			/>
+			<p>I build websites and stuff.</p>
+		</div>
+
+		<div className="
+		font-mono
+		">
+			<p>// Software Engineer</p>
+			<p>// Based in Bay Area</p>
+		</div>
+		<div className="mt-12">
+			<Button href="mailto:tonybanh@live.com" target="_blank">
+				Contact Me
+			</Button>
 		</div>
 	</section>
 );
