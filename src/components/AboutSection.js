@@ -4,8 +4,8 @@ import { Skills } from "./Skills";
 const AboutSection = () => {
 	return (
 		<section id="about" className="
-		min-h-screen
-		max-w-4xl
+		section-y
+		section-x
 		">
 			<h2>About Me</h2>
 

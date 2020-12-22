@@ -8,15 +8,13 @@ const IntroSection = () => (
 	items-start
 	h-screen
 	select-none
-	py-section
-	w-full
-	lg:max-w-screen-md
-	xl:max-w-screen-lg
+	section-y
+	section-x
 	">
 		{/* Intro text / icons */}
 
 		<div className="
-			text-5xl
+			text-6xl
 			font-bold
 			bg-clip-text
 			bg-gradient-to-r from-teal-400 to-blue-500
@@ -31,7 +29,7 @@ const IntroSection = () => (
 		</div>
 
 		<div className="
-		text-4xl
+		text-5xl
 		font-bold
 		text-gray-400
 		pb-4
