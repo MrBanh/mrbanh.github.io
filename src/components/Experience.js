@@ -1,4 +1,4 @@
-import workExperience from "../src/assets/workExperience";
+import workExperience from "../assets/workExperience";
 import { Position } from "./Position";
 
 export const Experience = () => (

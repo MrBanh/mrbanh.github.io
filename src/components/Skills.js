@@ -1,5 +1,5 @@
 import { Skill } from "./Skill";
-import skills from "../src/assets/skills";
+import skills from "../assets/skills";
 
 export const Skills = () => (
 	<div>
