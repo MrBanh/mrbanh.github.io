@@ -13,13 +13,9 @@ export const Background = () => (
 		</p>
 		<br />
 		<p>
-			I hold a Bachelor's in Accounting from {" "}
+			I hold a BS, Accounting from {" "}
 			<span className="highlight">San Jose State University</span>, with
-			5+ years of professional experience working as a Financial
-			Controller/Senior Accountant for small start-ups. I have been coding
-			as a hobby for the past few years. In 2020, I decided to seriously
-			pursue software engineering by enrolling in the Computer Science
-			program at{" "}
+			5+ years of professional experience as a Financial Controller. I have been coding as a hobby for the past few years. In 2020, I decided to seriously pursue software engineering by enrolling in the Computer Science program at{" "}
 			<span className="highlight">Fort Hays State University</span>.
 		</p>
 		<br />
