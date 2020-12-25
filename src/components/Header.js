@@ -8,7 +8,7 @@ export default function Header(){
 	useEffect(
 		() => {
 			function handleScroll(){
-				if (window.pageYOffset > 0) {
+				if (window.pageYOffset > 100) {
 					if (!scroll) {
 						setScroll(true);
 					}
@@ -30,13 +30,14 @@ export default function Header(){
 	return (
 		<header
 			className={`
-			${scroll ? "bg-white shadow" : "bg-transparent shadow-none"}
-			transition
+			${scroll ? "-translate-y-28" : "translate-y-0"}
+			transition-transform
+			transform
 			duration-150
 			ease-linear
 
 			z-50
-			min-h-header
+			h-header
 			flex
 			fixed
 			top-0
@@ -44,24 +45,31 @@ export default function Header(){
 			right-0
 		`}
 		>
-			<div className="container px-8 m-auto flex flex-row items-stretch w-full justify-between">
+			<div className="
+			px-6
+			m-auto
+			flex
+			flex-row
+			items-stretch
+			w-full
+			justify-between
+			lg:px-12
+			">
 				<Link href="/">
 					<a className="
 					flex
 					items-center
-					hover:text-lightBlue-600
 					transform hover:-translate-y-1
-					transition-all duration-100 ease-linear
+					transition-all duration-150 ease-linear
 					">
 						<img
 							src="/logo.svg"
 							alt="Logo icon"
 							className="h-12 w-12 mr-3"
 						/>
-						<span className="text-lg font-semibold">Tony Banh</span>
 					</a>
 				</Link>
-				<Navbar />
+				<Navbar scroll={scroll}/>
 			</div>
 		</header>
 	);

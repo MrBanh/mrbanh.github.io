@@ -1,21 +1,18 @@
-export default function Button({ children, target, href }){
+export default function Button(props){
 	return (
 		<a
 			className="
 					cursor-pointer
 					bg-gradient-to-tr from-teal-400 to-blue-500
 					text-white
-					font-bold
-					uppercase
-					text-md
+					font-mono
 					px-6 py-3
-					mx-auto
-					mb-2
 					rounded
 					border-solid
 					border-2
 					border-transparent
 					transition-all duration-150 ease-linear
+					inline-block
 
 					hover:from-transparent hover:to-transparent
 					focus:from-transparent focus:to-transparent
@@ -27,10 +24,9 @@ export default function Button({ children, target, href }){
 					focus:shadow-lg
 					focus:outline-none
 					 "
-			target={target || "_self"}
-			href={href || "#"}
+			{...props}
 		>
-			{children}
+			{props.children}
 		</a>
 	);
 }

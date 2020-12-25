@@ -9,17 +9,17 @@ module.exports = {
 				teal: colors.teal,
 				lightBlue: colors.lightBlue
 			},
-			minHeight: {
-				header: "80px"
-			},
-			margin: {
-				section: "80px"
+			height: {
+				header: "100px"
 			},
 			maxWidth: {
 				"1/2": "50%"
 			},
-			height: {
-				section: "calc(100vh - 80px)"
+			outline: {
+				lightBlue: "2px solid #0284C7"
+			},
+			padding: {
+				section: "100px"
 			}
 		}
 	},

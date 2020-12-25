@@ -1,7 +1,7 @@
 import Head from "next/head";
-
-import Header from "../components/Header";
-import IntroSection from "../components/IntroSection";
+import Header from "../src/components/Header";
+import IntroSection from "../src/components/IntroSection";
+import AboutSection from "../src/components/AboutSection";
 
 export default function Home(){
 	return (
@@ -29,8 +29,20 @@ export default function Home(){
 			</Head>
 
 			<Header />
-			<main className="container mx-auto px-8">
+			<main className="
+			container
+			flex
+			flex-col
+			items-center
+			px-6
+			mx-auto
+
+			sm:px-12
+			md:px-24
+			lg:px-36
+			">
 				<IntroSection />
+				<AboutSection />
 			</main>
 
 			<footer />
