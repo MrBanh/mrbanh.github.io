@@ -37,11 +37,11 @@
 	},
 	{
 		"icon": "/icons/tailwindcss.svg",
-		"name": "Tailwind CSS"
+		"name": "Tailwind"
 	},
 	{
 		"icon": "/icons/sass.svg",
-		"name": "SCSS, SASS"
+		"name": "Sass"
 	},
 	{
 		"icon": "/icons/git.svg",

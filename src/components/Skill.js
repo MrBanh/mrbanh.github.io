@@ -1,11 +1,9 @@
 export const Skill = ({ icon, name }) => (
 	<li className="
-		flex
-		flex-col
-		items-center
-		text-center
+	flex
+	items-center
 	">
-		<img className="h-12 w-12" src={icon} alt={`${name} icon`} />
-		<p>{name}</p>
+		<img className="h-4" src={icon} alt={`${name} icon`} />
+		<span className="pl-2">{name}</span>
 	</li>
 );
