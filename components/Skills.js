@@ -1,12 +1,12 @@
 import { Skill } from "./Skill";
-import skills from "../assets/skills";
+import skills from "../src/assets/skills";
 
 export const Skills = () => (
 	<div>
 		<div>
 			<p>A few technologies I'm familiar with:</p>
 		</div>
-		<br/>
+		<br />
 		<div>
 			<ul className="
 			grid

@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Header from "../src/components/Header";
-import IntroSection from "../src/components/IntroSection";
-import AboutSection from "../src/components/AboutSection";
+import Header from "../components/Header";
+import IntroSection from "../components/IntroSection";
+import AboutSection from "../components/AboutSection";
 
 export default function Home(){
 	return (
