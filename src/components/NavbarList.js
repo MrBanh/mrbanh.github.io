@@ -43,9 +43,6 @@ export const NavbarList = (props) => (
 		<NavItem href="#about" onClick={() => props.setIsOpen(false)}>
 			About
 		</NavItem>
-		<NavItem href="#experience" onClick={() => props.setIsOpen(false)}>
-			Experience
-		</NavItem>
 		<NavItem href="#projects" onClick={() => props.setIsOpen(false)}>
 			Projects
 		</NavItem>
