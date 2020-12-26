@@ -1,37 +1,44 @@
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import Navbar from "./Navbar";
 
 export default function Header(){
-	const [ scroll, setScroll ] = useState(false);
+	const [ renderHeader, setRenderHeader ] = useState(true);
+	const prevPageYOffset = useRef(0);
 
 	useEffect(
 		() => {
 			function handleScroll(){
 				if (window.pageYOffset > 100) {
-					if (!scroll) {
-						setScroll(true);
-					}
-				} else {
-					if (scroll) {
-						setScroll(false);
+					if (
+						window.pageYOffset > prevPageYOffset.current &&
+						renderHeader
+					) {
+						setRenderHeader(false);
+					} else if (
+						window.pageYOffset < prevPageYOffset.current &&
+						!renderHeader
+					) {
+						setRenderHeader(true);
 					}
 				}
+				prevPageYOffset.current = window.pageYOffset;
 			}
+
 			window.addEventListener("scroll", handleScroll);
 
 			return () => {
 				window.removeEventListener("scroll", handleScroll);
 			};
 		},
-		[ scroll ]
+		[ renderHeader ]
 	);
 
 	return (
 		<header
 			className={`
-			${scroll ? "-translate-y-28" : "translate-y-0"}
-			transition-transform
+			${renderHeader ? "translate-y-0 bg-white" : "-translate-y-28 bg-transparent"}
+			transition
 			transform
 			duration-150
 			ease-linear
@@ -69,7 +76,7 @@ export default function Header(){
 						/>
 					</a>
 				</Link>
-				<Navbar scroll={scroll}/>
+				<Navbar />
 			</div>
 		</header>
 	);

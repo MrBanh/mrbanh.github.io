@@ -8,7 +8,7 @@
 	}
 	,
 	.section-y {
-		@apply py-16 lg:py-section;
+		@apply py-section;
 	}
 	,
 	.section-x {

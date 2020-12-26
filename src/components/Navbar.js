@@ -2,39 +2,32 @@ import { useState, useEffect } from "react";
 import { HamburgerMenuOpenIcon } from "./HamburgerMenuOpenIcon";
 import { NavbarList } from "./NavbarList";
 
-export default function Navbar({ scroll }){
+export default function Navbar(){
 	const [ isOpen, setIsOpen ] = useState(false);
-	const [ renderMenu, setRenderMenu ] = useState(true);
 
 	useEffect(
 		() => {
 			function handleResize(){
 				setIsOpen(false);
-
-				setRenderMenu(false);
-				setTimeout(() => {
-					setRenderMenu(true);
-				}, 100);
 			}
 
 			function handleScroll(){
-				if (scroll) {
+				if (isOpen) {
 					setIsOpen(false);
 				}
 			}
 
-			handleScroll();
-
 			window.addEventListener("resize", handleResize);
+			window.addEventListener("scroll", handleScroll);
 			return () => {
 				window.removeEventListener("resize", handleResize);
+				window.removeEventListener("scroll", handleScroll);
 			};
 		},
-		[ isOpen, renderMenu, scroll ]
+		[ isOpen ]
 	);
 
 	return (
-		// Navbar
 		<nav className="
 		flex
 		font-mono
@@ -44,11 +37,7 @@ export default function Navbar({ scroll }){
 		lg:w-full
 		">
 			<HamburgerMenuOpenIcon setIsOpen={setIsOpen} />
-			{renderMenu ? (
-				<NavbarList isOpen={isOpen} setIsOpen={setIsOpen} />
-			) : (
-				""
-			)}
+			<NavbarList isOpen={isOpen} setIsOpen={setIsOpen} />
 		</nav>
 	);
 }
