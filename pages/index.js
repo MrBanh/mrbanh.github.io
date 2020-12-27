@@ -2,8 +2,7 @@ import Head from "next/head";
 import Header from "../src/components/Header";
 import IntroSection from "../src/components/IntroSection";
 import AboutSection from "../src/components/AboutSection";
-// import ProjectsSection from "../src/components/ProjectsSection";
-
+import ProjectsSection from "../src/components/ProjectsSection";
 
 export default function Home(){
 	return (
@@ -45,7 +44,7 @@ export default function Home(){
 			">
 				<IntroSection />
 				<AboutSection />
-				{/* <ProjectsSection /> */}
+				<ProjectsSection />
 			</main>
 
 			<footer />

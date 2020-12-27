@@ -1,0 +1,59 @@
+[
+	{
+		"name": "Park n' Go",
+		"description": "A full-stack web app for automating parking, created in collaboration with a group of students. Users can view their parking reservations, make a reservation, and view the parking status in real time. Administrators can manage parking spots, see financial reports, and manage users.",
+		"tools": [
+			"Express.js",
+			"MongoDB",
+			"Passport.js",
+			"jQuery",
+			"Bootstrap"
+		],
+		"img": "parkngo.png",
+		"yearCreated": "2020",
+		"links": [
+			{
+				"type": "github",
+				"url": "git.io/JT9x3"
+			},
+			{
+				"type": "github",
+				"url": "git.io/JT9xc"
+			}
+		]
+	},
+	{
+		"name": "Tony Banh's Portfolio",
+		"description": "A personal portfolio website built with Next.js (React) and Tailwind CSS.",
+		"tools": [ "Next.js", "React", "Tailwind CSS" ],
+		"img": "portfolio.png",
+		"yearCreated": "2020",
+		"links": [
+			{
+				"type": "github",
+				"url": "https://github.com/MrBanh/mrbanh.github.io"
+			},
+			{
+				"type": "demo",
+				"url": "https://mrbanh.vercel.app/"
+			}
+		]
+	},
+	{
+		"name": "Weather Forecast",
+		"description": "A fully responsive and accessible web app that pulls a 5-day weather forecast for any location. Bundled with Parcel.js, deployed to Netlify.",
+		"tools": [ "Sass", "Parcel.js", "API" ],
+		"img": "weatherforecast.png",
+		"yearCreated": "2020",
+		"links": [
+			{
+				"type": "github",
+				"url": "https://github.com/MrBanh/Weather-Forecast"
+			},
+			{
+				"type": "demo",
+				"url": "tony-banh-weather-forecast.netlify.app"
+			}
+		]
+	}
+]
