@@ -12,9 +12,6 @@ module.exports = {
 			height: {
 				header: "80px"
 			},
-			maxWidth: {
-				"1/2": "50%"
-			},
 			outline: {
 				lightBlue: "2px solid #0284C7"
 			},
