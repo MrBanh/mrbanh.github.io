@@ -33,7 +33,7 @@ export default function Navbar(){
 		font-mono
 		text-lg
 
-		lg:max-w-1/2
+		lg:max-w-screen-sm
 		lg:w-full
 		">
 			<HamburgerMenuOpenIcon setIsOpen={setIsOpen} />

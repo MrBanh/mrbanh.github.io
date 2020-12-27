@@ -21,6 +21,10 @@ export default function Header(){
 					) {
 						setRenderHeader(true);
 					}
+				} else {
+					if (!renderHeader) {
+						setRenderHeader(true);
+					}
 				}
 				prevPageYOffset.current = window.pageYOffset;
 			}
