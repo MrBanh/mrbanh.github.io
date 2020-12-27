@@ -4,16 +4,13 @@
 
 @layer components {
 	h2 {
-		@apply text-3xl font-bold bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 text-transparent inline-block sm:text-4xl md:text-5xl lg:text-6xl;
-	}
-	,
-	h3 {
-		@apply font-bold text-2xl;
+		@apply text-3xl font-bold bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 text-transparent inline-block leading-snug sm:text-4xl md:text-5xl lg:text-6xl;
 	}
 	,
 	.section-y {
-		@apply py-16 lg:py-section
-	},
+		@apply py-section;
+	}
+	,
 	.section-x {
 		@apply w-full mx-auto lg:max-w-screen-md xl:max-w-screen-lg;
 	}

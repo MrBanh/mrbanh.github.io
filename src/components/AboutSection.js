@@ -7,7 +7,7 @@ const AboutSection = () => {
 		section-y
 		section-x
 		">
-			<h2 className="mb-8">About Me</h2>
+			<h2 className="pb-8">About Me</h2>
 
 			{/* About Content */}
 			<div className="

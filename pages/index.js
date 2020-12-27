@@ -4,6 +4,7 @@ import IntroSection from "../src/components/IntroSection";
 import AboutSection from "../src/components/AboutSection";
 // import ProjectsSection from "../src/components/ProjectsSection";
 
+
 export default function Home(){
 	return (
 		<div className="font-sans text-gray-600 font-medium">
