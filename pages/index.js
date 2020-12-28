@@ -2,8 +2,7 @@ import Head from "next/head";
 import Header from "../src/components/Header";
 import IntroSection from "../src/components/IntroSection";
 import AboutSection from "../src/components/AboutSection";
-// import ProjectsSection from "../src/components/ProjectsSection";
-
+import ProjectsSection from "../src/components/ProjectsSection";
 
 export default function Home(){
 	return (
@@ -36,16 +35,17 @@ export default function Home(){
 			flex
 			flex-col
 			items-center
-			px-6
 			mx-auto
 
+			px-6
 			sm:px-12
-			md:px-24
-			lg:px-36
+			md:px-20
+			lg:px-28
+			xl:px-36
 			">
 				<IntroSection />
 				<AboutSection />
-				{/* <ProjectsSection /> */}
+				<ProjectsSection />
 			</main>
 
 			<footer />

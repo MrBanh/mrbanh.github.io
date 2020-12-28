@@ -25,7 +25,8 @@ module.exports = {
 			borderStyle: [ "hover", "focus" ],
 			borderWidth: [ "hover", "focus" ],
 			animation: [ "hover", "focus", "group-hover" ],
-			fontSize: [ "hover", "focus" ]
+			fontSize: [ "hover", "focus" ],
+			zIndex: [ "hover", "focus" ]
 		}
 	},
 	plugins: []
