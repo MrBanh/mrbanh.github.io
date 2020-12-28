@@ -1,3 +1,5 @@
+import { Projects } from "./Projects";
+
 const ProjectsSection = () => {
 	return (
 		<section
@@ -7,9 +9,8 @@ const ProjectsSection = () => {
         section-x
         "
 		>
-			<h2 className="
-            pb-8
-            ">Projects</h2>
+			<h2 className="pb-8">Projects</h2>
+			<Projects />
 		</section>
 	);
 };
