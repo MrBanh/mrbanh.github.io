@@ -46,6 +46,9 @@ export const NavbarList = (props) => (
 		<NavItem href="#projects" onClick={() => props.setIsOpen(false)}>
 			Projects
 		</NavItem>
+		<NavItem href="#contact" onClick={() => props.setIsOpen(false)}>
+			Contact
+		</NavItem>
 		<NavItem
 			target="_blank"
 			href="https://drive.google.com/file/d/1V_4DicXo8RTdx9cHRFxAaOA37Jl0piSt/view?usp=sharing"
