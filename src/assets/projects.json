@@ -25,7 +25,7 @@
 	{
 		"name": "Portfolio",
 		"description": "A personal portfolio website built with Next.js (React) and Tailwind CSS.",
-		"tech": [ "Next.js", "React", "Tailwind CSS" ],
+		"tech": [ "Next.js", "React", "TailwindCSS" ],
 		"img": "portfolio.png",
 		"yearCreated": "2020",
 		"links": [
