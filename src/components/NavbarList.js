@@ -1,3 +1,5 @@
+import { scroller } from "react-scroll";
+
 import { HamburgerMenuCloseIcon } from "./HamburgerMenuCloseIcon";
 import NavItem from "./NavItem";
 
@@ -40,13 +42,32 @@ export const NavbarList = (props) => (
 		<HamburgerMenuCloseIcon setIsOpen={props.setIsOpen} />
 
 		{/* Menu list */}
-		<NavItem href="/#about" onClick={() => props.setIsOpen(false)}>
+		<NavItem
+			href="/#about"
+			onClick={() => {
+				props.setIsOpen(false);
+				scroller.scrollTo("about", { duration: 250, smooth: true });
+			}}
+		>
 			About
 		</NavItem>
-		<NavItem href="/#projects" onClick={() => props.setIsOpen(false)}>
+
+		<NavItem
+			href="/#projects"
+			onClick={() => {
+				props.setIsOpen(false);
+				scroller.scrollTo("projects", { duration: 250, smooth: true });
+			}}
+		>
 			Projects
 		</NavItem>
-		<NavItem href="/#contact" onClick={() => props.setIsOpen(false)}>
+		<NavItem
+			href="/#contact"
+			onClick={() => {
+				props.setIsOpen(false);
+				scroller.scrollTo("contact", { duration: 250, smooth: true });
+			}}
+		>
 			Contact
 		</NavItem>
 		<NavItem
