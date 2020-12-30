@@ -4,6 +4,7 @@ import IntroSection from "../src/components/IntroSection";
 import AboutSection from "../src/components/AboutSection";
 import ProjectsSection from "../src/components/ProjectsSection";
 import ContactSection from "../src/components/ContactSection";
+import Footer from "../src/components/Footer";
 
 export default function Home(){
 	return (
@@ -50,7 +51,9 @@ export default function Home(){
 				<ContactSection />
 			</main>
 
-			<footer />
+			<footer>
+				<Footer />
+			</footer>
 		</div>
 	);
 }
