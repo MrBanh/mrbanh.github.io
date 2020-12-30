@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+import { animateScroll as scroll } from "react-scroll";
+
 import Navbar from "./Navbar";
 
 export default function Header(){
@@ -67,12 +69,15 @@ export default function Header(){
 			lg:px-12
 			">
 				<Link href="/">
-					<a className="
+					<a
+						onClick={() => scroll.scrollToTop({ duration: 250 })}
+						className="
 					flex
 					items-center
 					transform hover:-translate-y-1
 					transition-all duration-150 ease-linear
-					">
+					"
+					>
 						<img
 							src="/logo.svg"
 							alt="Logo icon"
