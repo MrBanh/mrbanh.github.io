@@ -1,6 +1,9 @@
-export default function Button(props){
+import React from "react";
+
+const Button = React.forwardRef((props, ref) => {
 	return (
 		<a
+			ref={ref}
 			className="
 					cursor-pointer
 					bg-gradient-to-tr from-teal-400 to-blue-500
@@ -29,4 +32,6 @@ export default function Button(props){
 			{props.children}
 		</a>
 	);
-}
+});
+
+export default Button;
