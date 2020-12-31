@@ -31,3 +31,16 @@
 		@apply font-mono text-lightBlue-600 font-bold;
 	}
 }
+
+/* Scroll animations using scroll-out library */
+[data-scroll] {
+	transition: all .5s;
+}
+[data-scroll="in"] {
+	opacity: 1;
+	transform: translateY(0);
+}
+[data-scroll="out"] {
+	opacity: 0;
+	transform: translateY(5rem);
+}

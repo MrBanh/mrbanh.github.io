@@ -1,4 +1,7 @@
+import React, { useEffect } from "react";
 import Head from "next/head";
+import ScrollOut from "scroll-out";
+
 import Header from "../src/components/Header";
 import IntroSection from "../src/components/IntroSection";
 import AboutSection from "../src/components/AboutSection";
@@ -7,6 +10,30 @@ import ContactSection from "../src/components/ContactSection";
 import Footer from "../src/components/Footer";
 
 export default function Home(){
+	useEffect(() => {
+		// scroll-out
+		const so = ScrollOut({ once: true, threshold: 0.25 });
+
+		// Handling page refresh
+		window.addEventListener("beforeunload", () => {
+			const hash = window.location.hash;
+			if (!hash) {
+				// Scroll to top of index page on reload with '/'
+				window.scrollTo(0, 0);
+			} else {
+				// If hash in param on page reload, scroll to specified section
+				const el = document.getElementById(hash.slice(1));
+				if (el) {
+					el.scrollIntoView();
+				}
+			}
+		});
+
+		return () => {
+			so.teardown();
+		};
+	}, []);
+
 	return (
 		<div className="font-sans text-gray-600 font-medium">
 			<Head>
