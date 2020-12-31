@@ -1,31 +1,23 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { CustomHead } from "../src/components/CustomHead";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 import Button from "../src/components/Button";
-import { TRANSITION_PROPS } from "../src/utils/util";
+import { TRANSITION_ON_SCROLL as t } from "../src/utils/util";
 
 export default function FourOhFour(){
-	// Reference html
-	const fourOhFourRef = useRef();
+	const [ show, setShow ] = useState(false);
 
-	const {
-		startTransY,
-		startOpacity,
-		endTransY,
-		endOpacity
-	} = TRANSITION_PROPS;
-	const startClass = TRANSITION_PROPS.startClass();
-
-	useEffect(() => {
-		const timeOut = setTimeout(() => {
-			fourOhFourRef.current.classList.remove(startTransY);
-			fourOhFourRef.current.classList.remove(startOpacity);
-			fourOhFourRef.current.classList.add(endTransY);
-			fourOhFourRef.current.classList.add(endOpacity);
-		}, 150);
-	}, []);
+	useEffect(
+		() => {
+			const timeOut = setTimeout(() => {
+				setShow(true);
+			}, 100);
+			return () => clearTimeout(timeOut);
+		},
+		[ show ]
+	);
 
 	return (
 		<div>
@@ -35,8 +27,9 @@ export default function FourOhFour(){
 				<section className="flex section-y section-x ">
 					<div
 						data-scroll
-						ref={fourOhFourRef}
-						className={`m-auto w-full h-full ${startClass}`}
+						className={`m-auto w-full h-full
+					${t.getHideShowClasses(show)}
+					${t.getRequiredTransitionClasses()}`}
 					>
 						<div className="flex flex-col justify-center items-center">
 							<div className="text-center">

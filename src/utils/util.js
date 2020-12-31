@@ -1,11 +1,15 @@
-export const TRANSITION_PROPS = {
+export const TRANSITION_ON_SCROLL = {
 	duration: "duration-500",
-	startTransY: "translate-y-20",
-	startOpacity: "opacity-0",
-	endTransY: "translate-y-0",
-	endOpacity: "opacity-100",
-	startClass: function(){
-		return `transition transform ${this.duration} ${this.startTransY} ${this
-			.startOpacity}`;
+	hideTransform: "translate-y-20",
+	hideOpacity: "opacity-0",
+	showTransform: "translate-y-0",
+	showOpacity: "opacity-100",
+	getRequiredTransitionClasses: function(){
+		return `transition transform ${this.duration}`;
+	},
+	getHideShowClasses: function(state){
+		return state
+			? `${this.showTransform} ${this.showOpacity}`
+			: `${this.hideTransform} ${this.hideOpacity}`;
 	}
 };

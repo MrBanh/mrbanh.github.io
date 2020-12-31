@@ -1,36 +1,20 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import Button from "./Button";
 
-import { TRANSITION_PROPS } from "../utils/util";
+import { TRANSITION_ON_SCROLL as t } from "../utils/util";
 
 const IntroSection = () => {
-	// Reference html elements
-	const titleRef = useRef();
-	const subTitleRef = useRef();
-	const descRef = useRef();
-	const buttonRef = useRef();
-	const elements = [ titleRef, subTitleRef, descRef, buttonRef ];
+	const [ show, setShow ] = useState(false);
 
-	// Tailwind transitions for DOM elements
-	const {
-		startTransY,
-		startOpacity,
-		endTransY,
-		endOpacity
-	} = TRANSITION_PROPS;
-	const startClass = TRANSITION_PROPS.startClass();
-
-	useEffect(() => {
-		// On mount, remove starting transition properties and add new tailwind transition properties
-		elements.forEach((el, i) => {
-			setTimeout(() => {
-				el.current.classList.remove(startOpacity);
-				el.current.classList.remove(startTransY);
-				el.current.classList.add(endOpacity);
-				el.current.classList.add(endTransY);
-			}, i * 100 + 150);
-		});
-	}, []);
+	useEffect(
+		() => {
+			const timeOut = setTimeout(() => {
+				setShow(true);
+			}, 100);
+			return () => clearTimeout(timeOut);
+		},
+		[ show ]
+	);
 
 	return (
 		<section className="
@@ -45,12 +29,15 @@ const IntroSection = () => {
 			w-full
 			h-full
 			">
-				<div ref={titleRef} className={`inline-block ${startClass}`}>
+				<div
+					className={`inline-block
+					${t.getRequiredTransitionClasses()}
+					${t.getHideShowClasses(show)}`}
+				>
 					<h1 className="leading-snug">Tony Banh</h1>
 				</div>
 
 				<div
-					ref={subTitleRef}
 					className={`
 			text-4xl
 			font-bold
@@ -60,17 +47,29 @@ const IntroSection = () => {
 			md:text-6xl
 			lg:text-7xl
 			xl:text-8xl
-			${startClass}
+			delay-300
+			${t.getRequiredTransitionClasses()}
+			${t.getHideShowClasses(show)}
 			`}
 				>
 					<p>I build websites and stuff.</p>
 				</div>
 
-				<div ref={descRef} className={`font-mono ${startClass}`}>
+				<div
+					className={`font-mono
+					delay-500
+					${t.getRequiredTransitionClasses()}
+					${t.getHideShowClasses(show)}`}
+				>
 					<p>// Software Engineer</p>
 					<p>// Based in Bay Area</p>
 				</div>
-				<div ref={buttonRef} className={`mt-12 ${startClass}`}>
+				<div
+					className={`mt-12
+				delay-700
+				${t.getRequiredTransitionClasses()}
+				${t.getHideShowClasses(show)}`}
+				>
 					<Button href="mailto:tonybanh@live.com" target="_blank">
 						Contact Me
 					</Button>
