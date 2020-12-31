@@ -1,35 +1,31 @@
-import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { CustomHead } from "../src/components/CustomHead";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 import Button from "../src/components/Button";
-import { TRANSITION_ON_SCROLL as t } from "../src/utils/util";
 
 export default function FourOhFour(){
-	const [ show, setShow ] = useState(false);
+	const fourOhFourRef = useRef();
 
-	useEffect(
-		() => {
-			const timeOut = setTimeout(() => {
-				setShow(true);
-			}, 100);
-			return () => clearTimeout(timeOut);
-		},
-		[ show ]
-	);
+	useEffect(() => {
+		fourOhFourRef.current.setAttribute("data-scroll", "in");
+
+		return () => {
+			fourOhFourRef.current.setAttribute("data-scroll", "true");
+		};
+	}, []);
 
 	return (
 		<div>
 			<CustomHead />
 			<Header />
 			<main className="h-screen flex justify-center items-center">
-				<section className="flex section-y section-x ">
+				<section className="flex section-y section-x">
 					<div
+						ref={fourOhFourRef}
 						data-scroll
-						className={`m-auto w-full h-full
-					${t.getHideShowClasses(show)}
-					${t.getRequiredTransitionClasses()}`}
+						className="m-auto w-full h-full delay-100"
 					>
 						<div className="flex flex-col justify-center items-center">
 							<div className="text-center">

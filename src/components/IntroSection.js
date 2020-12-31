@@ -1,21 +1,7 @@
-import { useEffect, useState } from "react";
 import Button from "./Button";
-
 import { TRANSITION_ON_SCROLL as t } from "../utils/util";
 
 const IntroSection = () => {
-	const [ show, setShow ] = useState(false);
-
-	useEffect(
-		() => {
-			const timeOut = setTimeout(() => {
-				setShow(true);
-			}, 100);
-			return () => clearTimeout(timeOut);
-		},
-		[ show ]
-	);
-
 	return (
 		<section className="
 		min-h-screen
@@ -24,52 +10,32 @@ const IntroSection = () => {
 		section-y
 		section-x
 		">
-			<div data-scroll className="
+			<div className="
 			m-auto
 			w-full
 			h-full
 			">
-				<div
-					className={`inline-block
-					${t.getRequiredTransitionClasses()}
-					${t.getHideShowClasses(show)}`}
-				>
+				<div data-scroll className="inline-block delay-100">
 					<h1 className="leading-snug">Tony Banh</h1>
 				</div>
 
 				<div
-					className={`
-			text-4xl
-			font-bold
-			text-gray-400
-			pb-4
-			sm:text-5xl
-			md:text-6xl
-			lg:text-7xl
-			xl:text-8xl
-			delay-300
-			${t.getRequiredTransitionClasses()}
-			${t.getHideShowClasses(show)}
-			`}
+					data-scroll
+					className="text-4xl font-bold text-gray-400 pb-4 delay-300
+				sm:text-5xl
+				md:text-6xl
+				lg:text-7xl
+				xl:text-8xl
+				"
 				>
 					<p>I build websites and stuff.</p>
 				</div>
 
-				<div
-					className={`font-mono
-					delay-500
-					${t.getRequiredTransitionClasses()}
-					${t.getHideShowClasses(show)}`}
-				>
+				<div data-scroll className="font-mono delay-500">
 					<p>// Software Engineer</p>
 					<p>// Based in Bay Area</p>
 				</div>
-				<div
-					className={`mt-12
-				delay-700
-				${t.getRequiredTransitionClasses()}
-				${t.getHideShowClasses(show)}`}
-				>
+				<div data-scroll className="mt-12 delay-700">
 					<Button href="mailto:tonybanh@live.com" target="_blank">
 						Contact Me
 					</Button>

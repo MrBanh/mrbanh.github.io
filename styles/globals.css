@@ -30,12 +30,12 @@
 	.highlight {
 		@apply font-mono text-lightBlue-600 font-bold;
 	}
+	[data-scroll] {
+		@apply transition-all duration-500 transform translate-y-20 opacity-0;
+	}
 }
 
 /* Scroll animations using scroll-out library */
-[data-scroll] {
-	transition: all .5s;
-}
 [data-scroll="in"] {
 	opacity: 1;
 	transform: translateY(0);
