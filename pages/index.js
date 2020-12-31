@@ -12,7 +12,10 @@ import Footer from "../src/components/Footer";
 export default function Home(){
 	useEffect(() => {
 		// scroll-out
-		const so = ScrollOut({ once: true, threshold: 0.25 });
+		const so = ScrollOut({
+			once: true,
+			threshold: 0.25
+		});
 
 		// Handling page refresh
 		window.addEventListener("beforeunload", () => {

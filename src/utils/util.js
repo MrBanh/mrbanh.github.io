@@ -7,9 +7,7 @@ export const TRANSITION_ON_SCROLL = {
 	getRequiredTransitionClasses: function(){
 		return `transition transform ${this.duration}`;
 	},
-	getHideShowClasses: function(state){
-		return state
-			? `${this.showTransform} ${this.showOpacity}`
-			: `${this.hideTransform} ${this.hideOpacity}`;
+	getHideClasses: function(){
+		return `${this.hideTransform} ${this.hideOpacity}`;
 	}
 };
