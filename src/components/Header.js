@@ -82,6 +82,7 @@ export default function Header(){
 							src="/logo.svg"
 							alt="Logo icon"
 							className="h-12 w-12 mr-3"
+							loading="lazy"
 						/>
 					</a>
 				</Link>
