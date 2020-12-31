@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import Button from "./Button";
 
+import { TRANSITION_PROPS } from "../utils/util";
+
 const IntroSection = () => {
 	// Reference html elements
 	const titleRef = useRef();
@@ -10,12 +12,13 @@ const IntroSection = () => {
 	const elements = [ titleRef, subTitleRef, descRef, buttonRef ];
 
 	// Tailwind transitions for DOM elements
-	const dur = "duration-500";
-	const startTransY = "translate-y-20";
-	const startOpacity = "opacity-0";
-	const endTransY = "translate-y-0";
-	const endOpacity = "opacity-100";
-	const startClass = `transition transform ${dur} ${startTransY} ${startOpacity}`;
+	const {
+		startTransY,
+		startOpacity,
+		endTransY,
+		endOpacity
+	} = TRANSITION_PROPS;
+	const startClass = TRANSITION_PROPS.startClass();
 
 	useEffect(() => {
 		// On mount, remove starting transition properties and add new tailwind transition properties
@@ -37,7 +40,7 @@ const IntroSection = () => {
 		section-y
 		section-x
 		">
-			<div className="
+			<div data-scroll className="
 			m-auto
 			w-full
 			h-full
