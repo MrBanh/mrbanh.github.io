@@ -2,7 +2,9 @@ import Icon from "./Icon";
 
 export const Project = (props) => {
 	return (
-		<div className="
+		<div
+			data-scroll
+			className="
         mb-10
         shadow-xl
         rounded
@@ -13,7 +15,8 @@ export const Project = (props) => {
         gap-2.5
 
         lg:shadow-none
-        ">
+        "
+		>
 			{/* Content */}
 			<div className="
             p-10
@@ -142,6 +145,7 @@ export const Project = (props) => {
                     "
 						src={props.img}
 						alt={`${props.name} screenshot`}
+						loading="lazy"
 					/>
 				</div>
 			</div>
