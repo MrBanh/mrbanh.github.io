@@ -10,10 +10,6 @@ export default function FourOhFour(){
 
 	useEffect(() => {
 		fourOhFourRef.current.setAttribute("data-scroll", "in");
-
-		return () => {
-			fourOhFourRef.current.setAttribute("data-scroll", "true");
-		};
 	}, []);
 
 	return (
