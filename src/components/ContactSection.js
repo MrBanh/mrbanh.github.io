@@ -3,7 +3,12 @@ import { SocialMediaIcons } from "./SocialMediaIcons";
 
 const ContactSection = () => {
 	return (
-		<section data-scroll id="contact" className="flex section-y section-x">
+		<section
+			data-scroll
+			id="contact"
+			aria-label="Contact"
+			className="flex section-y section-x"
+		>
 			<div className="m-auto w-full h-full">
 				<div className="
 				text-center

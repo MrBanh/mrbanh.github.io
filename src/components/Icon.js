@@ -12,7 +12,6 @@ export default function Icon(props){
                 transform
                 transition
                 duration-150
-                outline-none
                 rounded
                 border-solid
                 border-2
@@ -22,6 +21,7 @@ export default function Icon(props){
                 hover:text-lightBlue-600
                 focus:text-lightBlue-600
                 focus:border-lightBlue-600
+                focus:outline-none
         "
 		>
 			<div>{props.children}</div>

@@ -47,8 +47,6 @@ export default function Header(){
 			transition
 			transform
 			duration-150
-			ease-linear
-
 			z-50
 			h-header
 			flex
@@ -78,7 +76,6 @@ export default function Header(){
 					transform
 					transition-transform
 					duration-150
-					outline-none
 					rounded
 					border-solid
 					border-2
@@ -86,6 +83,7 @@ export default function Header(){
 					focus:border-lightBlue-600
 					focus:-translate-y-1
 					hover:-translate-y-1
+					focus:outline-none
 					"
 					>
 						<img

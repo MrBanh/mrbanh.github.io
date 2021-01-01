@@ -44,17 +44,17 @@ export const Project = (props) => {
 					<h3 className="">{props.name}</h3>
 					<span className="">{props.yearCreated}</span>
 				</div>
-				<div>
-					<p className="
+
+				<p className="
                     py-5
                     p-6
                    bg-gray-800
                     rounded
                     lg:text-white
                     ">
-						{props.description}
-					</p>
-				</div>
+					{props.description}
+				</p>
+
 				<ul className="flex flex-wrap font-mono my-2">
 					{props.tech.map((data, idx) => {
 						return (
@@ -70,7 +70,7 @@ export const Project = (props) => {
 							<Icon
 								href={data.url}
 								key={idx}
-								aria-label={data.type}
+								aria-label={`${props.name} project   ${data.type}`}
 							>
 								{data.type === "GitHub" ? (
 									<Github className="overflow-visible" />
@@ -117,7 +117,7 @@ export const Project = (props) => {
                     h-full
                     "
 						src={props.img}
-						alt={`${props.name} screenshot`}
+						alt={`image of ${props.name} project`}
 						loading="lazy"
 					/>
 				</div>

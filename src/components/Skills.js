@@ -5,10 +5,9 @@ export const Skills = () => (
 	<div>
 		<div>
 			<p>A few technologies I'm familiar with:</p>
-		</div>
-		<br/>
-		<div>
-			<ul className="
+			<br />
+			<div>
+				<ul className="
 			grid
 			grid-flow-row
 			grid-cols-2
@@ -17,10 +16,11 @@ export const Skills = () => (
 
 			md:grid-cols-3
 			">
-				{skills.map((data, idx) => {
-					return <Skill {...data} key={idx} />;
-				})}
-			</ul>
+					{skills.map((data, idx) => {
+						return <Skill {...data} key={idx} />;
+					})}
+				</ul>
+			</div>
 		</div>
 	</div>
 );

@@ -3,11 +3,15 @@ import { Skills } from "./Skills";
 
 const AboutSection = () => {
 	return (
-		<section id="about" className="
+		<section
+			id="about"
+			aria-label="About Me"
+			className="
 		flex
 		section-y
 		section-x
-		">
+		"
+		>
 			<div data-scroll className="m-auto w-full h-full">
 				<h2 className="pb-8">About Me</h2>
 

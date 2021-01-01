@@ -17,7 +17,10 @@ export default function FourOhFour(){
 			<CustomHead />
 			<Header />
 			<main className="h-screen flex justify-center items-center">
-				<section className="flex section-y section-x">
+				<section
+					className="flex section-y section-x"
+					aria-label="404 page"
+				>
 					<div
 						ref={fourOhFourRef}
 						data-scroll
@@ -29,8 +32,10 @@ export default function FourOhFour(){
 								<p className="error-desc">Page Not Found</p>
 							</div>
 							<div className="mt-12">
-								<Link href="/">
-									<Button>Go Back</Button>
+								<Link href="/" passHref>
+									<Button aria-label="Go Back to Home Page">
+										Go Back
+									</Button>
 								</Link>
 							</div>
 						</div>

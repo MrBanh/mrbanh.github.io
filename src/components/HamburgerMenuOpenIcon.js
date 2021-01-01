@@ -8,16 +8,20 @@ export const HamburgerMenuOpenIcon = (props) => (
 		<button
 			type="button"
 			className={`
-					m-auto
-					transform
-					transition-color transition-transform duration-150
 					text-lightBlue-600
+					m-auto
+					transition
+					duration-150
+					transform
 					rounded
-					hover:scale-110
-					focus:scale-110
+					border-solid
+					border-2
+					border-transparent
 					focus:outline-none
+					hover:border-lightBlue-600
+					focus:border-lightBlue-600
 					`}
-			aria-label="toggle menu"
+			aria-label="open navigation menu"
 			onClick={() => props.setIsOpen(true)}
 		>
 			<MenuOpen className="w-12 h-12 fill-current" />

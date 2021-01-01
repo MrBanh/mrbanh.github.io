@@ -2,13 +2,16 @@ import Button from "./Button";
 
 const IntroSection = () => {
 	return (
-		<section className="
+		<section
+			aria-label="Introduction"
+			className="
 		min-h-screen
 		select-none
 		flex
 		section-y
 		section-x
-		">
+		"
+		>
 			<div className="
 			m-auto
 			w-full
@@ -31,8 +34,12 @@ const IntroSection = () => {
 				</div>
 
 				<div data-scroll className="font-mono delay-500">
-					<p>// Software Engineer</p>
-					<p>// Based in Bay Area</p>
+					<p aria-label="I'm a software engineer">
+						// Software Engineer
+					</p>
+					<p aria-label="Based in the Bay Area">
+						// Based in the Bay Area
+					</p>
 				</div>
 				<div data-scroll className="mt-12 delay-700">
 					<Button href="mailto:tonybanh@live.com" target="_blank">
