@@ -9,15 +9,15 @@
 			"jQuery",
 			"Bootstrap"
 		],
-		"img": "parkngo.png",
+		"img": "images/parkngo.png",
 		"yearCreated": "2020",
 		"links": [
 			{
-				"type": "github",
+				"type": "GitHub",
 				"url": "https://git.io/JT9x3"
 			},
 			{
-				"type": "github",
+				"type": "GitHub",
 				"url": "https://git.io/JT9xc"
 			}
 		]
@@ -26,11 +26,11 @@
 		"name": "Portfolio",
 		"description": "A personal portfolio website built with Next.js (React) and Tailwind CSS.",
 		"tech": [ "Next.js", "React", "TailwindCSS" ],
-		"img": "portfolio.png",
+		"img": "images/portfolio.png",
 		"yearCreated": "2020",
 		"links": [
 			{
-				"type": "github",
+				"type": "GitHub",
 				"url": "https://github.com/MrBanh/mrbanh.github.io"
 			},
 			{
@@ -43,11 +43,11 @@
 		"name": "Weather Forecast",
 		"description": "A fully responsive and accessible web app that pulls a 5-day weather forecast for any location. Bundled with Parcel.js, deployed to Netlify.",
 		"tech": [ "Sass", "Parcel.js", "OpenWeatherMap API" ],
-		"img": "weatherforecast.png",
+		"img": "images/weatherforecast.png",
 		"yearCreated": "2020",
 		"links": [
 			{
-				"type": "github",
+				"type": "GitHub",
 				"url": "https://github.com/MrBanh/Weather-Forecast"
 			},
 			{

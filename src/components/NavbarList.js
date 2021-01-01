@@ -4,7 +4,7 @@ import { HamburgerMenuCloseIcon } from "./HamburgerMenuCloseIcon";
 import NavItem from "./NavItem";
 
 export const NavbarList = (props) => (
-	<div
+	<ul
 		className={`
 				flex
 				text-white
@@ -77,5 +77,5 @@ export const NavbarList = (props) => (
 		>
 			Resume
 		</NavItem>
-	</div>
+	</ul>
 );

@@ -3,6 +3,8 @@ import React from "react";
 const Button = React.forwardRef((props, ref) => {
 	return (
 		<a
+			tabIndex="0"
+			role="button"
 			ref={ref}
 			className="
 					cursor-pointer
@@ -10,6 +12,7 @@ const Button = React.forwardRef((props, ref) => {
 					text-white
 					font-mono
 					px-6 py-3
+					outline-none
 					rounded
 					border-solid
 					border-2
@@ -25,7 +28,6 @@ const Button = React.forwardRef((props, ref) => {
 					focus:border-lightBlue-600
 					hover:shadow-lg
 					focus:shadow-lg
-					focus:outline-none
 					 "
 			{...props}
 		>

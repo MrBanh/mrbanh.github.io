@@ -1,5 +1,4 @@
 import Button from "./Button";
-import { TRANSITION_ON_SCROLL as t } from "../utils/util";
 
 const IntroSection = () => {
 	return (

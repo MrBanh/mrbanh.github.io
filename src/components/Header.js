@@ -70,18 +70,28 @@ export default function Header(){
 			">
 				<Link href="/">
 					<a
+						aria-label="home"
 						onClick={() => scroll.scrollToTop({ duration: 250 })}
 						className="
 					flex
 					items-center
-					transform hover:-translate-y-1
-					transition-all duration-150 ease-linear
+					transform
+					transition-transform
+					duration-150
+					outline-none
+					rounded
+					border-solid
+					border-2
+					border-transparent
+					focus:border-lightBlue-600
+					focus:-translate-y-1
+					hover:-translate-y-1
 					"
 					>
 						<img
 							src="/logo.svg"
 							alt="Logo icon"
-							className="h-12 w-12 mr-3"
+							className="h-12 w-12"
 							loading="lazy"
 						/>
 					</a>

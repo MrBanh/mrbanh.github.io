@@ -10,18 +10,13 @@ export const SocialMediaIcons = () => (
     items-center
     my-4
     ">
-		<Icon
-			target="_blank"
-			href="https://github.com/MrBanh"
-			className="p-2.5 h-12 w-12 mx-2"
-		>
+		<Icon href="https://github.com/MrBanh" aria-label="GitHub">
 			<Github className="overflow-visible" />
 		</Icon>
 
 		<Icon
-			target="_blank"
 			href="https://www.linkedin.com/in/tony-banh/"
-			className="h-12 w-12 p-2.5 mx-2"
+			aria-label="LinkedIn"
 		>
 			<LinkedIn className="overflow-visible" />
 		</Icon>

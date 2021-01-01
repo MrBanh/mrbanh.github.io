@@ -1,19 +1,30 @@
 export default function Icon(props){
 	return (
-		<a {...props}>
-			<div className="
+		<a
+			{...props}
+			target="_blank"
+			className="
+                w-12
+                h-12
+                p-2.5
+                mx-1.5
                 fill-current
                 transform
-                transition-color transition-transform duration-150
+                transition
+                duration-150
+                outline-none
+                rounded
+                border-solid
+                border-2
+                border-transparent
                 hover:scale-110
                 focus:scale-110
                 hover:text-lightBlue-600
                 focus:text-lightBlue-600
-                focus:select-none
-                focus:outline-none
-            ">
-				{props.children}
-			</div>
+                focus:border-lightBlue-600
+        "
+		>
+			<div>{props.children}</div>
 		</a>
 	);
 }

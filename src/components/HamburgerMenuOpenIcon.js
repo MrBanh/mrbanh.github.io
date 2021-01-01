@@ -1,3 +1,5 @@
+import MenuOpen from "../../public/icons/MenuOpen.svg";
+
 export const HamburgerMenuOpenIcon = (props) => (
 	<div className="
 				flex
@@ -8,7 +10,7 @@ export const HamburgerMenuOpenIcon = (props) => (
 			className={`
 					m-auto
 					transform
-					transition-color transition-transform duration-150 ease-linear
+					transition-color transition-transform duration-150
 					text-lightBlue-600
 					rounded
 					hover:scale-110
@@ -18,11 +20,7 @@ export const HamburgerMenuOpenIcon = (props) => (
 			aria-label="toggle menu"
 			onClick={() => props.setIsOpen(true)}
 		>
-			<svg viewBox="0 0 24 24" className="h-12 w-12 fill-current">
-				<path
-					fillRule="evenodd"
-					d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
-			</svg>
+			<MenuOpen className="w-12 h-12 fill-current" />
 		</button>
 	</div>
 );
