@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import { CustomHead } from "../src/components/CustomHead";
-import Header from "../src/components/Header";
-import Footer from "../src/components/Footer";
-import Button from "../src/components/Button";
 
-export default function FourOhFour(){
+import CustomHead from "@components/CustomHead";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
+import Button from "@components/Button";
+
+const FourOhFour = () => {
 	const fourOhFourRef = useRef();
 
 	useEffect(() => {
@@ -47,4 +48,6 @@ export default function FourOhFour(){
 			</footer>
 		</div>
 	);
-}
+};
+
+export default FourOhFour;

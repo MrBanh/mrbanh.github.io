@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import ScrollOut from "scroll-out";
 
-import { CustomHead } from "../src/components/CustomHead";
-import Header from "../src/components/Header";
-import IntroSection from "../src/components/IntroSection";
-import AboutSection from "../src/components/AboutSection";
-import ProjectsSection from "../src/components/ProjectsSection";
-import ContactSection from "../src/components/ContactSection";
-import Footer from "../src/components/Footer";
+import CustomHead from "@components/CustomHead";
+import Header from "@components/Header";
+import IntroSection from "@components/IntroSection";
+import AboutSection from "@components/AboutSection";
+import ProjectsSection from "@components/ProjectsSection";
+import ContactSection from "@components/ContactSection";
+import Footer from "@components/Footer";
 
-export default function Home(){
+const Home = () => {
 	useEffect(() => {
 		// scroll-out
 		const so = ScrollOut({
@@ -65,4 +65,6 @@ export default function Home(){
 			</footer>
 		</div>
 	);
-}
+};
+
+export default Home;

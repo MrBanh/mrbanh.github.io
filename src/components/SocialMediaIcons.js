@@ -1,24 +1,30 @@
-import Icon from "./Icon";
-import Github from "../../public/icons/github.svg";
-import LinkedIn from "../../public/icons/linkedin.svg";
+import { socialMedia } from "@config";
 
-export const SocialMediaIcons = () => (
-	<div className="
+import IconWrapper from "@components/IconWrapper";
+import Icon from "@components/icon";
+
+const SocialMediaIcons = () => {
+	return (
+		<div className="
     flex
     flex-row
     justify-center
     items-center
     my-4
     ">
-		<Icon href="https://github.com/MrBanh" aria-label="GitHub">
-			<Github className="overflow-visible" />
-		</Icon>
+			{socialMedia.map((social, i) => {
+				return (
+					<IconWrapper
+						href={social.url}
+						aria-label={social.name}
+						key={i}
+					>
+						<Icon name={social.name} />
+					</IconWrapper>
+				);
+			})}
+		</div>
+	);
+};
 
-		<Icon
-			href="https://www.linkedin.com/in/tony-banh/"
-			aria-label="LinkedIn"
-		>
-			<LinkedIn className="overflow-visible" />
-		</Icon>
-	</div>
-);
+export default SocialMediaIcons;

@@ -2,9 +2,10 @@ import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 
-import Navbar from "./Navbar";
+import Navbar from "@components/Navbar";
+import Icon from "@components/icon";
 
-export default function Header(){
+const Header = () => {
 	const [ renderHeader, setRenderHeader ] = useState(true);
 	const prevPageYOffset = useRef(0);
 
@@ -86,16 +87,15 @@ export default function Header(){
 					focus:outline-none
 					"
 					>
-						<img
-							src="/logo.svg"
-							alt="Logo icon"
-							className="h-12 w-12"
-							loading="lazy"
-						/>
+						<div className="h-12 w-12" aria-label="Logo">
+							<Icon name="logo" />
+						</div>
 					</a>
 				</Link>
 				<Navbar />
 			</div>
 		</header>
 	);
-}
+};
+
+export default Header;

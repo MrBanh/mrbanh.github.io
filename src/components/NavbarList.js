@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import { scroller } from "react-scroll";
-
-import { HamburgerMenuCloseIcon } from "./HamburgerMenuCloseIcon";
-import NavItem from "./NavItem";
 import { navLinks } from "@config";
 
-export const NavbarList = (props) => {
+import HamburgerMenuCloseIcon from "@components/HamburgerMenuCloseIcon";
+import NavItem from "@components/NavItem";
+
+const NavbarList = (props) => {
 	const closeIconRef = useRef();
 	const navItemsRef = useRef([]);
 
@@ -146,3 +146,5 @@ export const NavbarList = (props) => {
 		</div>
 	);
 };
+
+export default NavbarList;

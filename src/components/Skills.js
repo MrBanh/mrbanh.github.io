@@ -1,7 +1,8 @@
-import { Skill } from "./Skill";
-import skills from "../assets/skills";
+import { skills } from "@config";
 
-export const Skills = () => (
+import Skill from "@components/Skill";
+
+const Skills = () => (
 	<div>
 		<div>
 			<p>A few technologies I'm familiar with:</p>
@@ -16,11 +17,13 @@ export const Skills = () => (
 
 			md:grid-cols-3
 			">
-					{skills.map((data, idx) => {
-						return <Skill {...data} key={idx} />;
+					{skills.map((skill, i) => {
+						return <Skill name={skill} key={i} />;
 					})}
 				</ul>
 			</div>
 		</div>
 	</div>
 );
+
+export default Skills;

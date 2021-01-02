@@ -1,7 +1,8 @@
 import React from "react";
-import MenuClose from "../../public/icons/MenuClose.svg";
 
-export const HamburgerMenuCloseIcon = React.forwardRef((props, ref) => (
+import Icon from "@components/icon";
+
+const HamburgerMenuCloseIcon = React.forwardRef((props, ref) => (
 	<div className="
 					w-full
 					flex
@@ -27,7 +28,11 @@ export const HamburgerMenuCloseIcon = React.forwardRef((props, ref) => (
 			aria-label="close navigation menu"
 			onClick={() => props.setIsOpen(false)}
 		>
-			<MenuClose className="h-12 w-12 fill-current" />
+			<div className="h-12 w-12 fill-current">
+				<Icon name="menuClose" />
+			</div>
 		</button>
 	</div>
 ));
+
+export default HamburgerMenuCloseIcon;

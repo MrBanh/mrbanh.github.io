@@ -1,6 +1,6 @@
-import MenuOpen from "../../public/icons/MenuOpen.svg";
+import Icon from "@components/icon";
 
-export const HamburgerMenuOpenIcon = (props) => (
+const HamburgerMenuOpenIcon = (props) => (
 	<div className="
 				flex
 				lg:hidden
@@ -24,7 +24,11 @@ export const HamburgerMenuOpenIcon = (props) => (
 			aria-label="open navigation menu"
 			onClick={() => props.setIsOpen(true)}
 		>
-			<MenuOpen className="w-12 h-12 fill-current" />
+			<div className="w-12 h-12 fill-current">
+				<Icon name="menuOpen" />
+			</div>
 		</button>
 	</div>
 );
+
+export default HamburgerMenuOpenIcon;

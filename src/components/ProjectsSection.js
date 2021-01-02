@@ -1,4 +1,4 @@
-import { Projects } from "./Projects";
+import Projects from "@components/Projects";
 
 const ProjectsSection = () => {
 	return (

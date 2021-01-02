@@ -1,4 +1,6 @@
-import Button from "./Button";
+import { email } from "@config";
+
+import Button from "@components/Button";
 
 const IntroSection = () => {
 	return (
@@ -42,7 +44,7 @@ const IntroSection = () => {
 					</p>
 				</div>
 				<div data-scroll className="mt-12 delay-700">
-					<Button href="mailto:tonybanh@live.com" target="_blank">
+					<Button href={`mailto:${email}`} target="_blank">
 						Contact Me
 					</Button>
 				</div>
