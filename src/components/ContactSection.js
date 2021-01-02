@@ -1,5 +1,7 @@
-import Button from "./Button";
-import { SocialMediaIcons } from "./SocialMediaIcons";
+import { email } from "@config";
+
+import Button from "@components/Button";
+import SocialMediaIcons from "@components/SocialMediaIcons";
 
 const ContactSection = () => {
 	return (
@@ -29,7 +31,7 @@ const ContactSection = () => {
 					</p>
 
 					<div className="my-12">
-						<Button href="mailto:tonybanh@live.com" target="_blank">
+						<Button href={`mailto:${email}`} target="_blank">
 							Let's Talk!
 							{"\u{1F44B}"}
 						</Button>

@@ -1,10 +1,13 @@
-import { Project } from './Project'
-import projects from "../assets/projects";
+import { projects } from "@config";
 
-export const Projects = () => (
+import Project from "@components/Project";
+
+const Projects = () => (
 	<div>
-		{projects.map((data, idx) => {
-			return <Project {...data} key={idx} />;
+		{projects.map((project, i) => {
+			return <Project {...project} key={i} />;
 		})}
 	</div>
 );
+
+export default Projects;

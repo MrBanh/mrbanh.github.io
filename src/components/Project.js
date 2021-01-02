@@ -1,8 +1,7 @@
-import Icon from "@components/Icon";
-import Github from "../../public/icons/github.svg";
-import ExternalLink from "../../public/icons/ExternalLink.svg";
+import IconWrapper from "@components/IconWrapper";
+import Icon from "@components/icon";
 
-export const Project = (props) => {
+const Project = ({ name, description, builtWith, img, yearCreated, links }) => {
 	return (
 		<div
 			data-scroll
@@ -41,8 +40,8 @@ export const Project = (props) => {
             ">
 				<p className="highlight">Featured Project</p>
 				<div className="flex justify-between items-center mb-6 lg:flex-col lg:items-start">
-					<h3 className="">{props.name}</h3>
-					<span className="">{props.yearCreated}</span>
+					<h3 className="">{name}</h3>
+					<span className="">{yearCreated}</span>
 				</div>
 
 				<p className="
@@ -52,32 +51,28 @@ export const Project = (props) => {
                     rounded
                     lg:text-white
                     ">
-					{props.description}
+					{description}
 				</p>
 
 				<ul className="flex flex-wrap font-mono my-2">
-					{props.tech.map((data, idx) => {
+					{builtWith.map((tech, i) => {
 						return (
-							<span className="mr-4" key={idx}>
-								{data}
+							<span className="mr-4" key={i}>
+								{tech}
 							</span>
 						);
 					})}
 				</ul>
 				<div className="flex">
-					{props.links.map((data, idx) => {
+					{links.map((link, i) => {
 						return (
-							<Icon
-								href={data.url}
-								key={idx}
-								aria-label={`${props.name} project   ${data.type}`}
+							<IconWrapper
+								href={link.url}
+								key={i}
+								aria-label={`${name} project ${link.name}`}
 							>
-								{data.type === "GitHub" ? (
-									<Github className="overflow-visible" />
-								) : (
-									<ExternalLink />
-								)}
-							</Icon>
+								<Icon name={link.name} />
+							</IconWrapper>
 						);
 					})}
 				</div>
@@ -116,8 +111,8 @@ export const Project = (props) => {
                     w-full
                     h-full
                     "
-						src={props.img}
-						alt={`image of ${props.name} project`}
+						src={img}
+						alt={`image of ${name} project`}
 						loading="lazy"
 					/>
 				</div>
@@ -125,3 +120,5 @@ export const Project = (props) => {
 		</div>
 	);
 };
+
+export default Project;

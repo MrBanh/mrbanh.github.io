@@ -7,6 +7,9 @@
         "baseUrl": ".",
         "paths":{
             "@components/*": ["src/components/*"],
+            "@components/icons": ["src/components/icons/index.js"],
+            "@components/icon": ["src/components/icons/icon.js"],
+            "@styles": ["styles/globals.css"],
             "@config": ["src/config.js"]
         }
     },

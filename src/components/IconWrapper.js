@@ -1,4 +1,4 @@
-export default function Icon(props){
+const IconWrapper = (props) => {
 	return (
 		<a
 			{...props}
@@ -27,4 +27,6 @@ export default function Icon(props){
 			<div>{props.children}</div>
 		</a>
 	);
-}
+};
+
+export default IconWrapper;

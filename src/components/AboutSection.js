@@ -1,5 +1,5 @@
-import { Background } from "./Background";
-import { Skills } from "./Skills";
+import Background from '@components/Background'
+import Skills from "@components/Skills";
 
 const AboutSection = () => {
 	return (

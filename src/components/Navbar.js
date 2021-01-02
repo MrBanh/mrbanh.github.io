@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { HamburgerMenuOpenIcon } from "./HamburgerMenuOpenIcon";
-import { NavbarList } from "./NavbarList";
 
-export default function Navbar(){
+import HamburgerMenuOpenIcon from "@components/HamburgerMenuOpenIcon";
+import NavbarList from "@components/NavbarList";
+
+const Navbar = () => {
 	const [ isOpen, setIsOpen ] = useState(false);
 
 	useEffect(
@@ -40,4 +41,6 @@ export default function Navbar(){
 			<NavbarList isOpen={isOpen} setIsOpen={setIsOpen} />
 		</nav>
 	);
-}
+};
+
+export default Navbar;
