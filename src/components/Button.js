@@ -3,7 +3,6 @@ import React from "react";
 const Button = React.forwardRef((props, ref) => {
 	return (
 		<a
-			type="button"
 			tabIndex="0"
 			ref={ref}
 			className="
