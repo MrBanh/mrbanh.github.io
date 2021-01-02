@@ -90,7 +90,7 @@ module.exports = {
 				},
 				{
 					name: "demo",
-					url: "https://mrbanh.vercel.app/"
+					url: "https://tonybanh.dev/"
 				}
 			]
 		},
