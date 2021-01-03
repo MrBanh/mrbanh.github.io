@@ -6,7 +6,7 @@ const Footer = () => {
     ">
         <span>Built by Tony Banh</span>
         {" | "}
-        <span className="highlight">2020</span>
+        <span className="font-mono font-bold">2020</span>
     </div> );
 }
 

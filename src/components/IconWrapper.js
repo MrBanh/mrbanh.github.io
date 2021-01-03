@@ -3,6 +3,7 @@ const IconWrapper = (props) => {
 		<a
 			{...props}
 			target="_blank"
+			rel="noopener noreferrer"
 			className="
                 w-12
                 h-12

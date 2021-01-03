@@ -38,7 +38,10 @@ const AboutSection = () => {
 					md:mt-0
 					md:col-span-2
 					">
-						<img src="/avatar.svg" alt="avatar" loading="lazy" />
+						<img className="
+						w-full
+						h-auto
+						" width="100" height="100" src="/avatar.svg" alt="avatar" loading="lazy" />
 					</div>
 				</div>
 			</div>
