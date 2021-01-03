@@ -3,6 +3,12 @@ import Head from "next/head";
 
 const CustomHead = () => (
 	<Head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charSet="utf-8" />
+		<meta
+			name="description"
+			content="Tony Banh is an aspiring software engineer based in the Bay Area."
+		/>
 		<title>Tony Banh's Portfolio</title>
 		<link
 			rel="apple-touch-icon"
