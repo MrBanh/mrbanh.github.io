@@ -25,7 +25,12 @@ const IntroSection = () => {
 
 				<div
 					data-scroll
-					className="text-4xl font-bold text-gray-400 pb-4 delay-300
+					className="
+				text-gray-500
+				text-4xl
+				font-bold
+				pb-4
+				delay-300
 				sm:text-5xl
 				md:text-6xl
 				lg:text-7xl
@@ -44,7 +49,11 @@ const IntroSection = () => {
 					</p>
 				</div>
 				<div data-scroll className="mt-12 delay-700">
-					<Button href={`mailto:${email}`} target="_blank">
+					<Button
+						href={`mailto:${email}`}
+						target="_blank"
+						rel="nofollow noopener noreferrer"
+					>
 						Contact Me
 					</Button>
 				</div>

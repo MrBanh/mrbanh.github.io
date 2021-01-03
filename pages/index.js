@@ -38,7 +38,7 @@ const Home = () => {
 	}, []);
 
 	return (
-		<div className="font-sans text-gray-600 font-medium">
+		<div>
 			<CustomHead />
 			<Header />
 			<main className="

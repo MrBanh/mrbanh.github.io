@@ -22,7 +22,7 @@ const Project = ({ name, description, builtWith, img, yearCreated, links }) => {
 			<div className="
             p-10
             z-10
-            rounded-xl
+            rounded
             text-white
             bg-gray-900
 
@@ -57,9 +57,9 @@ const Project = ({ name, description, builtWith, img, yearCreated, links }) => {
 				<ul className="flex flex-wrap font-mono my-2">
 					{builtWith.map((tech, i) => {
 						return (
-							<span className="mr-4" key={i}>
+							<li className="mr-4" key={i}>
 								{tech}
-							</span>
+							</li>
 						);
 					})}
 				</ul>
@@ -98,23 +98,46 @@ const Project = ({ name, description, builtWith, img, yearCreated, links }) => {
                 lg:opacity-60
                 lg:transition-opacity
                 lg:duration-150
-                lg:shadow-xl
-                lg:rounded
-                lg:overflow-hidden
                 lg:hover:opacity-100
                 lg:focus:opacity-100
                 lg:max-w-md
+                lg:relative
                 ">
 					<img
 						className="
                     object-contain
+                    h-auto
                     w-full
-                    h-full
+                    relative
+                    z-20
+                    rounded
+                    border-2
+                    border-solid
+                    border-lightBlue-600
+                    shadow-xl
                     "
 						src={img}
 						alt={`image of ${name} project`}
+						width="1280"
+						height="927"
 						loading="lazy"
 					/>
+					<div className="
+                    h-full
+                    w-full
+                    absolute
+                    top-0
+                    left-0
+                    z-0
+                    rounded
+                    border-2
+                    border-solid
+                    border-lightBlue-600
+                    transform
+                    -translate-y-2
+                    translate-x-2
+                    shadow-xl
+                    " />
 				</div>
 			</div>
 		</div>

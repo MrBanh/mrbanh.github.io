@@ -133,6 +133,7 @@ const NavbarList = (props) => {
 					) : (
 						<NavItem
 							target="_blank"
+							rel="nofollow noopener noreferrer"
 							ref={(el) => (navItemsRef.current[i] = el)}
 							href={nav.url}
 							onClick={() => props.setIsOpen(false)}

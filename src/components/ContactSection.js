@@ -31,7 +31,11 @@ const ContactSection = () => {
 					</p>
 
 					<div className="my-12">
-						<Button href={`mailto:${email}`} target="_blank">
+						<Button
+							href={`mailto:${email}`}
+							target="_blank"
+							rel="nofollow noopener noreferrer"
+						>
 							Let's Talk!
 							{"\u{1F44B}"}
 						</Button>
