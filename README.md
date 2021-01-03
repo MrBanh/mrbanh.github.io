@@ -1,30 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img alt="Logo" src="https://raw.githubusercontent.com/MrBanh/mrbanh.github.io/main/public/favicon/apple-touch-icon.png?token=AGGEU3QAQR6QIVSXOZMNPVS77LHCE" width="100" height="100"/>
+</div>
+<h1 align="center">
+  <a href="https://tonybanh.dev" style="text-decoration: none; color: inherit;" rel="noreferrer noopener">TonyBanh.dev</a>
+</h1>
 
-## Getting Started
+![demo](https://raw.githubusercontent.com/MrBanh/mrbanh.github.io/main/public/images/portfolio.png?token=AGGEU3UK4F7CJUFDF3XDC2277KLKCg)
 
-First, run the development server:
+## 🛠 Installation & Set Up
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. Install dependencies
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```sh
+   npm install
+   ```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+2. Start the development server
 
-## Learn More
+   ```sh
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Building and Running for Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Generate a full static production build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```sh
+   npm run build
+   ```
 
-## Deploy on Vercel
+1. Preview the site as it will appear once deployed
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```sh
+   npm run start
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🎨 Color Reference
+
+| Color          | Hex                                                                |
+| -------------- | ------------------------------------------------------------------ |
+| Blue           | ![#3B82F6](https://via.placeholder.com/10/3B82F6?text=+) `#3B82F6` |
+| Light Blue     | ![#0284C7](https://via.placeholder.com/10/0284C7?text=+) `#0284C7` |
+| Teal           | ![#2DD4BF](https://via.placeholder.com/10/2DD4BF?text=+) `#2DD4BF` |
+| Darkest Gray   | ![#111827](https://via.placeholder.com/10/111827?text=+) `#111827` |
+| Darker Gray    | ![#1F2937](https://via.placeholder.com/10/1F2937?text=+) `#1F2937` |
+| Gray           | ![#4B5563](https://via.placeholder.com/10/4B5563?text=+) `#4B5563` |
+| Light Gray     | ![#6B7280](https://via.placeholder.com/10/6B7280?text=+) `#6B7280` |
+| White          | ![#ffffff](https://via.placeholder.com/10/ffffff?text=+) `#ffffff` |
+
+## ✨ Credits
+
+Inspiration and design:
+- [brittanychiang.com](https://brittanychiang.com)
+- [kylecaprio.dev](https://www.kylecaprio.dev/)
