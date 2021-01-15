@@ -108,7 +108,7 @@ module.exports = {
 				},
 				{
 					name: "demo",
-					url: "https://tony-banh-weather-forecast.netlify.app"
+					url: "https://tbanh-weather.netlify.app/"
 				}
 			]
 		}
