@@ -19,12 +19,11 @@ const IntroSection = () => {
 			w-full
 			h-full
 			">
-				<div data-scroll className="inline-block delay-100">
+				<div  className="inline-block delay-100">
 					<h1 className="leading-snug">Tony Banh</h1>
 				</div>
 
 				<div
-					data-scroll
 					className="
 				text-gray-500
 				text-4xl
@@ -40,7 +39,7 @@ const IntroSection = () => {
 					<p>I build websites and stuff.</p>
 				</div>
 
-				<div data-scroll className="font-mono delay-500">
+				<div  className="font-mono delay-500">
 					<p aria-label="I'm a software engineer">
 						// Software Engineer
 					</p>
@@ -48,7 +47,7 @@ const IntroSection = () => {
 						// Based in the Bay Area
 					</p>
 				</div>
-				<div data-scroll className="mt-12 delay-700">
+				<div  className="mt-12 delay-700">
 					<Button
 						href={`mailto:${email}`}
 						target="_blank"
