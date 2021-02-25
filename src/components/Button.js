@@ -15,7 +15,7 @@ const Button = React.forwardRef((props, ref) => {
 					border-solid
 					border-2
 					border-transparent
-					transition-all
+					transition
 					duration-150
 					inline-block
 
