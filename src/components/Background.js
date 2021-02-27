@@ -13,15 +13,16 @@ const Background = () => (
 		</p>
 		<br />
 		<p>
-			I hold a BS, Accounting from {" "}
+			I hold a B.S., Accounting from {" "}
 			<span className="highlight">San Jose State University</span>, with
-			5+ years of professional experience as a Financial Controller. I
-			have been coding as a hobby for the past few years. In 2020, I
-			decided to seriously pursue software engineering by enrolling in the
-			Computer Science program at{" "}
+			8+ years of professional accounting experience and 3+ years as a
+			Financial Controller. I have been coding as a hobby for the past few
+			years. In 2020, I decided to seriously pursue software engineering
+			by enrolling in the B.S., Computer Science program at{" "}
 			<span className="highlight">Fort Hays State University</span>.
+			I will be graduating in Fall 2021.
 		</p>
-		<br />
+		<br/>
 	</div>
 );
 
