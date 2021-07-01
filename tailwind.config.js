@@ -1,7 +1,7 @@
-const colors = require("tailwindcss/colors");
+const colors = require('tailwindcss/colors');
 
 module.exports = {
-	purge: [ "./pages/**/*.js", "./src/components/**/*.js" ],
+	purge: [ './pages/**/*.js', './src/components/**/*.js' ],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		extend: {
@@ -10,23 +10,23 @@ module.exports = {
 				lightBlue: colors.lightBlue
 			},
 			height: {
-				header: "80px"
+				header: '80px'
 			},
 			outline: {
-				lightBlue: "2px solid #0284C7"
+				lightBlue: '2px solid #0284C7'
 			},
 			padding: {
-				section: "80px"
+				section: '80px'
 			}
 		}
 	},
 	variants: {
 		extend: {
-			borderStyle: [ "hover", "focus" ],
-			borderWidth: [ "hover", "focus" ],
-			animation: [ "hover", "focus", "group-hover" ],
-			fontSize: [ "hover", "focus" ],
-			zIndex: [ "hover", "focus" ]
+			borderStyle: [ 'hover', 'focus' ],
+			borderWidth: [ 'hover', 'focus' ],
+			animation: [ 'hover', 'focus', 'group-hover' ],
+			fontSize: [ 'hover', 'focus' ],
+			zIndex: [ 'hover', 'focus' ]
 		}
 	},
 	plugins: []

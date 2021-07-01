@@ -2,9 +2,9 @@ const IconWrapper = (props) => {
 	return (
 		<a
 			{...props}
-			target="_blank"
-			rel="noopener noreferrer"
-			className="
+			target='_blank'
+			rel='noopener noreferrer'
+			className='
                 w-12
                 h-12
                 p-2.5
@@ -23,7 +23,7 @@ const IconWrapper = (props) => {
                 focus:text-lightBlue-600
                 focus:border-lightBlue-600
                 focus:outline-none
-        "
+        '
 		>
 			<div>{props.children}</div>
 		</a>

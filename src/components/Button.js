@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const Button = React.forwardRef((props, ref) => {
 	return (
 		<a
-			tabIndex="0"
+			tabIndex='0'
 			ref={ref}
-			className="
+			className='
 					cursor-pointer
 					bg-gradient-to-tr from-teal-400 to-blue-500
 					text-white
@@ -28,7 +28,7 @@ const Button = React.forwardRef((props, ref) => {
 					hover:shadow-lg
 					focus:shadow-lg
 					focus:outline-none
-					 "
+					 '
 			{...props}
 		>
 			{props.children}

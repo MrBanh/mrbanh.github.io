@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
-import { animateScroll as scroll } from "react-scroll";
+import Link from 'next/link';
+import { useState, useRef, useEffect } from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 
-import Navbar from "@components/Navbar";
-import Icon from "@components/icon";
+import Navbar from '@components/Navbar';
+import Icon from '@components/icon';
 
 const Header = () => {
 	const [ renderHeader, setRenderHeader ] = useState(true);
@@ -11,7 +11,7 @@ const Header = () => {
 
 	useEffect(
 		() => {
-			function handleScroll(){
+			function handleScroll() {
 				if (window.pageYOffset > 100) {
 					if (
 						window.pageYOffset > prevPageYOffset.current &&
@@ -32,10 +32,10 @@ const Header = () => {
 				prevPageYOffset.current = window.pageYOffset;
 			}
 
-			window.addEventListener("scroll", handleScroll);
+			window.addEventListener('scroll', handleScroll);
 
 			return () => {
-				window.removeEventListener("scroll", handleScroll);
+				window.removeEventListener('scroll', handleScroll);
 			};
 		},
 		[ renderHeader ]
@@ -44,7 +44,7 @@ const Header = () => {
 	return (
 		<header
 			className={`
-			${renderHeader ? "translate-y-0 bg-white" : "-translate-y-28 bg-transparent"}
+			${renderHeader ? 'translate-y-0 bg-white' : '-translate-y-28 bg-transparent'}
 			transition
 			transform
 			duration-150
@@ -57,7 +57,7 @@ const Header = () => {
 			right-0
 		`}
 		>
-			<div className="
+			<div className='
 			px-6
 			m-auto
 			flex
@@ -66,12 +66,12 @@ const Header = () => {
 			w-full
 			justify-between
 			lg:px-12
-			">
-				<Link href="/">
+			'>
+				<Link href='/'>
 					<a
-						aria-label="home"
+						aria-label='home'
 						onClick={() => scroll.scrollToTop({ duration: 250 })}
-						className="
+						className='
 					flex
 					items-center
 					transform
@@ -85,10 +85,10 @@ const Header = () => {
 					focus:-translate-y-1
 					hover:-translate-y-1
 					focus:outline-none
-					"
+					'
 					>
-						<div className="h-12 w-12" aria-label="Logo">
-							<Icon name="logo" />
+						<div className='h-12 w-12' aria-label='Logo'>
+							<Icon name='logo' />
 						</div>
 					</a>
 				</Link>
