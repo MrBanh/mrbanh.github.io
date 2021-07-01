@@ -1,11 +1,11 @@
-import IconWrapper from "@components/IconWrapper";
-import Icon from "@components/icon";
+import IconWrapper from '@components/IconWrapper';
+import Icon from '@components/icon';
 
 const Project = ({ name, description, builtWith, img, yearCreated, links }) => {
 	return (
 		<div
 			data-scroll
-			className="
+			className='
         mb-10
         shadow-xl
         rounded
@@ -16,10 +16,10 @@ const Project = ({ name, description, builtWith, img, yearCreated, links }) => {
         gap-2.5
 
         lg:shadow-none
-        "
+        '
 		>
 			{/* Content */}
-			<div className="
+			<div className='
             p-10
             z-10
             rounded
@@ -37,33 +37,33 @@ const Project = ({ name, description, builtWith, img, yearCreated, links }) => {
             lg:row-span-full
             lg:col-start-1
             lg:col-end-7
-            ">
-				<p className="highlight">Featured Project</p>
-				<div className="flex justify-between items-center mb-6 lg:flex-col lg:items-start">
-					<h3 className="">{name}</h3>
-					<span className="">{yearCreated}</span>
+            '>
+				<p className='highlight'>Featured Project</p>
+				<div className='flex justify-between items-center mb-6 lg:flex-col lg:items-start'>
+					<h3 className=''>{name}</h3>
+					<span className=''>{yearCreated}</span>
 				</div>
 
-				<p className="
+				<p className='
                     py-5
                     p-6
                    bg-gray-800
                     rounded
                     lg:text-white
-                    ">
+                    '>
 					{description}
 				</p>
 
-				<ul className="flex flex-wrap font-mono my-2">
+				<ul className='flex flex-wrap font-mono my-2'>
 					{builtWith.map((tech, i) => {
 						return (
-							<li className="mr-4" key={i}>
+							<li className='mr-4' key={i}>
 								{tech}
 							</li>
 						);
 					})}
 				</ul>
-				<div className="flex">
+				<div className='flex'>
 					{links.map((link, i) => {
 						return (
 							<IconWrapper
@@ -79,7 +79,7 @@ const Project = ({ name, description, builtWith, img, yearCreated, links }) => {
 			</div>
 
 			{/* Image */}
-			<div className="
+			<div className='
             hidden
             lg:col-start-6
             lg:col-end-13
@@ -90,8 +90,8 @@ const Project = ({ name, description, builtWith, img, yearCreated, links }) => {
             lg:flex-col
             lg:justify-center
             lg:max-w-lg
-            ">
-				<div className="
+            '>
+				<div className='
                 hidden
 
                 lg:block
@@ -102,9 +102,9 @@ const Project = ({ name, description, builtWith, img, yearCreated, links }) => {
                 lg:focus:opacity-100
                 lg:max-w-md
                 lg:relative
-                ">
+                '>
 					<img
-						className="
+						className='
                     object-contain
                     h-auto
                     w-full
@@ -115,14 +115,14 @@ const Project = ({ name, description, builtWith, img, yearCreated, links }) => {
                     border-solid
                     border-lightBlue-600
                     shadow-xl
-                    "
+                    '
 						src={img}
 						alt={`image of ${name} project`}
-						width="1280"
-						height="927"
-						loading="lazy"
+						width='1280'
+						height='927'
+						loading='lazy'
 					/>
-					<div className="
+					<div className='
                     h-full
                     w-full
                     absolute
@@ -137,7 +137,7 @@ const Project = ({ name, description, builtWith, img, yearCreated, links }) => {
                     -translate-y-2
                     translate-x-2
                     shadow-xl
-                    " />
+                    ' />
 				</div>
 			</div>
 		</div>

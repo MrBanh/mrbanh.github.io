@@ -1,12 +1,12 @@
-import Icon from "@components/icon";
+import Icon from '@components/icon';
 
 const HamburgerMenuOpenIcon = (props) => (
-	<div className="
+	<div className='
 				flex
 				lg:hidden
-			">
+			'>
 		<button
-			type="button"
+			type='button'
 			className={`
 					text-lightBlue-600
 					m-auto
@@ -21,11 +21,11 @@ const HamburgerMenuOpenIcon = (props) => (
 					hover:border-lightBlue-600
 					focus:border-lightBlue-600
 					`}
-			aria-label="open navigation menu"
+			aria-label='open navigation menu'
 			onClick={() => props.setIsOpen(true)}
 		>
-			<div className="w-12 h-12 fill-current">
-				<Icon name="menuOpen" />
+			<div className='w-12 h-12 fill-current'>
+				<Icon name='menuOpen' />
 			</div>
 		</button>
 	</div>

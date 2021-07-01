@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
 const NavItem = React.forwardRef((props, ref) => {
 	return (
-		<li className="flex">
+		<li className='flex'>
 			<a
 				ref={ref}
 				{...props}
-				className="
+				className='
 					inline-block
 					cursor-pointer
 					ml-auto
@@ -28,7 +28,7 @@ const NavItem = React.forwardRef((props, ref) => {
 					lg:focus:border-lightBlue-600
 					lg:hover:text-lightBlue-600
 					lg:focus:text-lightBlue-600
-					"
+					'
 			>
 				{props.children}
 			</a>

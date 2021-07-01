@@ -1,9 +1,9 @@
-import { useEffect, useRef } from "react";
-import { scroller } from "react-scroll";
-import { navLinks } from "@config";
+import { useEffect, useRef } from 'react';
+import { scroller } from 'react-scroll';
+import { navLinks } from '@config';
 
-import HamburgerMenuCloseIcon from "@components/HamburgerMenuCloseIcon";
-import NavItem from "@components/NavItem";
+import HamburgerMenuCloseIcon from '@components/HamburgerMenuCloseIcon';
+import NavItem from '@components/NavItem';
 
 const NavbarList = (props) => {
 	const closeIconRef = useRef();
@@ -19,8 +19,8 @@ const NavbarList = (props) => {
 			 * @param {HTMLElement} el
 			 * @param {string} bool
 			 */
-			function setAriaHidden(el, bool = "false"){
-				el.setAttribute("aria-hidden", bool);
+			function setAriaHidden(el, bool = 'false') {
+				el.setAttribute('aria-hidden', bool);
 			}
 
 			/**
@@ -28,22 +28,22 @@ const NavbarList = (props) => {
 			 * @param {HTMLElement} el
 			 * @param {number} val - either -1 or 0
 			 */
-			function setTabIndex(el, val = -1){
-				el.setAttribute("tabindex", val);
+			function setTabIndex(el, val = -1) {
+				el.setAttribute('tabindex', val);
 			}
 
 			/**
 			 * @returns {boolean}
 			 */
-			function isHiddenFromSR(){
+			function isHiddenFromSR() {
 				return window.innerWidth < 1024 && !props.isOpen;
 			}
 
 			/**
 			 * Handles the aria-hidden attributes for each el referenced
 			 */
-			function hideOrShowFromSR(){
-				const ariaHiddenVal = isHiddenFromSR() ? "true" : "false";
+			function hideOrShowFromSR() {
+				const ariaHiddenVal = isHiddenFromSR() ? 'true' : 'false';
 				const tabIndexVal = isHiddenFromSR() ? -1 : 0;
 
 				setAriaHidden(closeIconRef.current, ariaHiddenVal);
@@ -55,16 +55,16 @@ const NavbarList = (props) => {
 				});
 			}
 
-			function handleResize(){
+			function handleResize() {
 				hideOrShowFromSR();
 			}
 
-			window.addEventListener("resize", handleResize);
+			window.addEventListener('resize', handleResize);
 
 			hideOrShowFromSR();
 
 			return () => {
-				window.removeEventListener("resize", handleResize);
+				window.removeEventListener('resize', handleResize);
 			};
 		},
 		[ props.isOpen ]
@@ -85,7 +85,7 @@ const NavbarList = (props) => {
 				transform
 				transition-transform
 				duration-150
-				${props.isOpen ? "translate-y-0" : "-translate-y-full"}
+				${props.isOpen ? 'translate-y-0' : '-translate-y-full'}
 
 				lg:text-current
 				lg:bg-transparent
@@ -132,8 +132,8 @@ const NavbarList = (props) => {
 						</NavItem>
 					) : (
 						<NavItem
-							target="_blank"
-							rel="nofollow noopener noreferrer"
+							target='_blank'
+							rel='nofollow noopener noreferrer'
 							ref={(el) => (navItemsRef.current[i] = el)}
 							href={nav.url}
 							onClick={() => props.setIsOpen(false)}
